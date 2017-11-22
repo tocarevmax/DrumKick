@@ -1,0 +1,144 @@
+.navigation {
+  position: relative;
+  background-color: #1e2126;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  font-family: 'helvetica neue',helvetica,arial,sans-serif;
+  // font-size: 15px;
+  // line-height: 1.5;
+  width: 100%;
+
+}
+
+.vsc-initialized{
+  border-top: 5px solid red;
+  min-width: 1080px;
+}
+
+
+.navigation-large-screen {
+  background-color: #1e2126;
+  width: 1080px;
+  margin: auto;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  text-transform: none;
+  font-size: 15px;
+  // border: 1px solid green;
+}
+
+
+.nav-item a {
+  padding: 5px 15px;
+}
+
+.nav-bar {
+  width: 1080px;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  // border: 1px solid yellow;
+
+}
+
+.logo {
+  align-items: center;
+}
+
+.logo-img {
+  width: 90px;
+  height: 26px;
+  background-color: white;
+}
+
+.sub-nav {
+  // border: 1px solid red;
+}
+
+.sub-nav ul {
+  // border: 1px solid yellow;
+}
+
+.sub-nav ul li {
+  padding: 3px;
+  // border: 1px solid red;
+}
+
+.navigation-search-form .navigation-search {
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  width: 250px;
+  // padding: 5px;
+  background-color: #fff;
+  border: none;
+  color: black;
+  text-indent:10px;
+}
+
+.navigation-search-form .search-button {
+  margin-left: -19px;
+  padding-right: 5px;
+  background-color: #fff;
+  // border: 1px solid red;
+}
+
+.search-button img {
+  height: 15px;
+  width: 14px;
+}
+
+.login-signup {
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 20px;
+  align-items: center;
+
+}
+
+.signup-link {
+  background-color: #F61253;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+
+
+.login-link, .logout-button,  {
+  margin-left: 10px;
+  padding: 5px 6px;
+}
+
+.username-display {
+  padding: 5px 0px;
+}
+
+
+.sub-nav a:hover {
+  color: #f80046;
+}
+
+.sub-nav img:hover {
+  background-color: #f80046;
+}
+
+.logout-button:hover {
+  color: #f80046;
+}
+
+.login-signup .signup-link:hover {
+  color: #fff;
+}
+
+.search-button .navigation-submit:hover {
+  background-color: #fff;
+}
+
+.navigation-search-form .navigation-search:focus,
+.navigation-search-form:hover .navigation-search {
+  outline: 0;
+  box-shadow: 0 0 3px 3px rgba(150,150,200,.6)
+}
