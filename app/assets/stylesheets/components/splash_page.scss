@@ -171,3 +171,39 @@
     opacity: 0;
   }
 }
+
+.benefits {
+  color: #999;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.benefits .benefit-block {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  width: 360px;
+  padding: 70px 20px;
+  flex-direction: column;
+}
+
+.benefits .benefit-block img {
+  height: 50px;
+}
+
+.benefits .benefit-block h4 {
+  color: #3a3a3a;
+  line-height: 1.3em;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.benefits .benefit-block p {
+  font-size: 16px;
+  line-height: 1.5;
+}
