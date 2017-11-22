@@ -1,0 +1,168 @@
+.container {
+  width: 1080px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+#hero-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000;
+  height: 607px;
+  position: relative;
+  margin-top: 20px;
+}
+
+#hero-image .value-message {
+  z-index: 20;
+  position: relative;
+  text-align: center;
+  padding-top: 220px;
+  margin-bottom: 20px;
+}
+
+.value-message {
+  color: #fff;
+  font-family: 'helvetica neue',helvetica,arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.value-message h1 {
+  font-size: 60px;
+  line-height: 1em;
+  margin-bottom: 20px;
+  font-weight: 200;
+  padding: 0 50px;
+}
+
+.value-message h3 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: .4em;
+  line-height: 1.3em;
+}
+
+.start-tracking-signup-link {
+  cursor: pointer;
+  display: block;
+  background-color: #f80046;
+  color: #fff;
+  text-align: center;
+  width: 260px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border-radius: 3px;
+  line-height: 26px;
+  min-width: 170px;
+  min-height: 22px;
+  text-decoration: none;
+  letter-spacing: .1em;
+}
+
+.start-tracking-signup-link:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+#hero-image .start-tracking-box {
+  z-index: 20;
+  position: relative;
+  display: block;
+  font-family: 'helvetica neue',helvetica,arial,sans-serif;
+}
+
+#hero-image img {
+  height: 607px;
+  width: 1080px;
+}
+
+#hero-image .brief-slideshow:nth-of-type(1) {
+  -webkit-animation: fade7 32s infinite;
+  animation: fade7 32s infinite;
+}
+
+#hero-image .brief-slideshow:nth-of-type(2) {
+  -webkit-animation: fade7 32s infinite;
+  animation: fade6 32s infinite;
+}
+
+#hero-image .brief-slideshow:nth-of-type(3) {
+  -webkit-animation: fade7 32s infinite;
+  animation: fade5 32s infinite;
+}
+
+#hero-image .brief-slideshow:nth-of-type(4) {
+  -webkit-animation: fade7 32s infinite;
+  animation: fade4 32s infinite;
+}
+
+#hero-image .brief-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+@keyframes fade7 {
+  0% {
+    opacity: 1;
+  }
+
+  25%, 50%, 75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade6 {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100%, 50%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade5 {
+  0%, 25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade4 {
+  0%, 25%, 50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

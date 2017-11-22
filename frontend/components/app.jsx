@@ -13,6 +13,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionLinksContainer from './session_links/session_links_container';
 import SessionFormContainer from './session_form/session_form_container';
 import TestProtectedContainer from './test_protected_component/test_protected_component';
+import SplashPage from './splash_page/splash_page';
+
 
 const App = () => (
   <div>
@@ -84,7 +86,8 @@ const App = () => (
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <ProtectedRoute path="/" component={TestProtectedContainer} />
+        <Route path="/" component={SplashPage} />
+
       </Switch>
     </div>
   </div>
