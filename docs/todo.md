@@ -16,6 +16,9 @@ Concert.all.where('"date_time" > ?', Date.parse('26-06-2018'))
 Date.parse('01-05-2018')
 
 search by name:
-Artist.where('lower(name) ~ ?', "AdE".downcase)
+Artist.where('lower(name) ~ ?', "The Chainsmokers".downcase)
 
 Concert.where('lower(name) ~ ?', "at".downcase).limit(5)
+
+
+Artist.find(4).upcoming_events == Artist.find(4).concerts.count

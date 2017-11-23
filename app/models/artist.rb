@@ -17,4 +17,22 @@ class Artist < ApplicationRecord
   validates :tm_id, :name, uniqueness: true
 
   has_many :concerts
+
+  def self.update_upcoming_events
+    Artist.all.each do |artist|
+      p artist.name
+      p "current upcoming_events: #{artist.upcoming_events}"
+      upc_ev = artist.concerts.count
+      p "need to update to this upcoming_events: #{upc_ev}"
+      artist.update_attributes(upcoming_events: upc_ev)
+    end
+    nil
+  end
+
+  def self.check_upcoming_events
+    Artist.all.each do |artist|
+      p artist.upcoming_events == artist.concerts.count
+    end
+    nil
+  end
 end
