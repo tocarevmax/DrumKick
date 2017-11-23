@@ -89,8 +89,8 @@ const pluckWithId = (db_artist_id) => {
       image_url = findImageWidth640(currentEvent.images);
       locale = currentEvent.locale;
       venue_name = venue.name;
-      venue_lat = venue.location.latitude;
-      venue_long = venue.location.longitude;
+      venue_lat = Number(venue.location.latitude);
+      venue_long = Number(venue.location.longitude);
       venue_address = `${venue.address.line1}, ${venue.city.name}, ${venue.state.stateCode} ${venue.postalCode}, ${venue.country.countryCode}`;
       price_range = `$${currentEvent.priceRanges[0].min} - $${currentEvent.priceRanges[0].max}`;
 

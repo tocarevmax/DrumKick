@@ -24,12 +24,17 @@
 #
 
 class Concert < ApplicationRecord
+
   validates :artist_id, :tm_id, :tm_attraction_id, :name, :tm_url,
     :date_time, :local_date, :local_time, :timezone, :image_url,
     :locale, :venue_name, :venue_lat, :venue_long, :venue_address,
     :price_range, presence: true
 
-  validates :tm_id, uniqueness: true
+  acts_as_mappable :default_units => :miles,
+                 :default_formula => :sphere,
+                 :distance_field_name => :distance,
+                 :lat_column_name => :venue_lat,
+                 :lng_column_name => :venue_long
 
   belongs_to :artist
 end

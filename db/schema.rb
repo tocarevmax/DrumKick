@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123182744) do
+ActiveRecord::Schema.define(version: 20171123181245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,15 +33,15 @@ ActiveRecord::Schema.define(version: 20171123182744) do
     t.string "tm_attraction_id", null: false
     t.string "name", null: false
     t.string "tm_url", null: false
-    t.string "date_time", null: false
+    t.datetime "date_time", null: false
     t.string "local_date", null: false
     t.string "local_time", null: false
     t.string "timezone", null: false
     t.string "image_url", null: false
     t.string "locale", null: false
     t.string "venue_name", null: false
-    t.string "venue_lat", null: false
-    t.string "venue_long", null: false
+    t.float "venue_lat", null: false
+    t.float "venue_long", null: false
     t.string "venue_address", null: false
     t.string "price_range", null: false
     t.datetime "created_at", null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20171123182744) do
     t.index ["artist_id"], name: "index_concerts_on_artist_id"
     t.index ["name"], name: "index_concerts_on_name"
     t.index ["tm_attraction_id"], name: "index_concerts_on_tm_attraction_id"
-    t.index ["tm_id"], name: "index_concerts_on_tm_id", unique: true
+    t.index ["tm_id"], name: "index_concerts_on_tm_id"
     t.index ["venue_lat"], name: "index_concerts_on_venue_lat"
     t.index ["venue_long"], name: "index_concerts_on_venue_long"
     t.index ["venue_name"], name: "index_concerts_on_venue_name"

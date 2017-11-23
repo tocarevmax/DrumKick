@@ -3,7 +3,7 @@ import {startFetchingConcerts} from './seeding_concerts';
 export const fetchFromTMbyArtistName = (artistName) => {
   return $.ajax({
     type:"GET",
-    url:`https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${encodeURI(artistName)}&apikey=4QLYvPV1gpArAyanl8lWyRvtESjU9XY8`,
+    url:`https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${encodeURI(artistName)}&classificationName=Music&apikey=4QLYvPV1gpArAyanl8lWyRvtESjU9XY8`,
     async:true,
     dataType: "json",
   });
@@ -260,7 +260,7 @@ const artistsOfChoice = [
 const shortList = [
   // 'Coldplay',
   // 'Rihanna',
-  // 'U2',
+  'U2',
   // 'Eminem',
   // 'Maroon 5',
   // 'Adele',

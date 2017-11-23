@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 
+gem 'geokit-rails'
+
 group :production do
   gem 'rails_12factor'
 end
