@@ -272,8 +272,8 @@ const shortList = [
 
 export const startFetchingArtistsFromList = () => {
   let resArr = [];
-  for (var i = 0; i < shortList.length; i++) {
-    fetchFromTMbyArtistName(shortList[i])
+  for (var i = 0; i < artistsOfChoice.length; i++) {
+    fetchFromTMbyArtistName(artistsOfChoice[i])
       .then((res) => {
         let plucked = pluckRelevantFieldsFromFetchedArtist(res);
         if (plucked) {
