@@ -8,7 +8,7 @@ export const fetchFromTMbyArtistName = (artistName) => {
   });
 };
 
-const findImageWidth640 = (imagesArray) => {
+export const findImageWidth640 = (imagesArray) => {
   for (var i = 0; i < imagesArray.length; i++) {
     if (Number(imagesArray[i].width) === 640) {
       return imagesArray[i].url;
