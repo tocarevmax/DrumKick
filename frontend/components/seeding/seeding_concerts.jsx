@@ -22,7 +22,7 @@ export const fetchConcertsFromTMbyAttractionId = (attractionId) => {
 const pluckRelevantFieldsFromFetchedConcerts = (res) => {
   const eventsArray = res._embedded.events;
   const resArray = [];
-  let tm_id, tm_attraction_id, name, tm_url, date_time,
+  let artist_id, tm_id, tm_attraction_id, name, tm_url, date_time,
       local_date, local_time, timezone, image_url, locale,
       venue_name, venue_lat, venue_long, venue_address, price_range;
 
@@ -34,6 +34,7 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
     let currentEvent = eventsArray[i];
     let venue = currentEvent._embedded.venues[0];
 
+    // artist_id ; comes from my db
     tm_id = currentEvent.id;
     tm_attraction_id = currentEvent._embedded.attractions[0].id;
     name = currentEvent.name;
@@ -50,12 +51,12 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
     venue_address = `${venue.address.line1}, ${venue.city.name}, ${venue.state.stateCode} ${venue.postalCode}, ${venue.country.countryCode}`;
     price_range = `$${currentEvent.priceRanges[0].min} - $${currentEvent.priceRanges[0].max}`;
 
-    if (tm_id && tm_attraction_id && name && tm_url && date_time &&
+    if (artist_id && tm_id && tm_attraction_id && name && tm_url && date_time &&
         local_date && local_time && timezone && image_url && locale &&
         venue_name && venue_lat && venue_long && venue_address && price_range) {
 
       resArray.push({
-        tm_id, tm_attraction_id, name, tm_url, date_time,
+        artist_id, tm_id, tm_attraction_id, name, tm_url, date_time,
         local_date, local_time, timezone, image_url, locale,
         venue_name, venue_lat, venue_long, venue_address, price_range});
     }
