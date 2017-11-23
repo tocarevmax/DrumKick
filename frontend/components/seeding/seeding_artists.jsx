@@ -1,3 +1,4 @@
+import {startFetchingConcerts} from './seeding_concerts';
 
 export const fetchFromTMbyArtistName = (artistName) => {
   return $.ajax({
@@ -259,7 +260,7 @@ const artistsOfChoice = [
 const shortList = [
   // 'Coldplay',
   // 'Rihanna',
-  'U2',
+  // 'U2',
   // 'Eminem',
   // 'Maroon 5',
   // 'Adele',
@@ -269,7 +270,7 @@ const shortList = [
   // 'Katy Perry'
 ];
 
-const startFetchingArtistsFromList = () => {
+export const startFetchingArtistsFromList = () => {
   let resArr = [];
   for (var i = 0; i < shortList.length; i++) {
     fetchFromTMbyArtistName(shortList[i])
@@ -278,7 +279,10 @@ const startFetchingArtistsFromList = () => {
         if (plucked) {
           resArr.push(plucked);
           console.log(resArr);
-          createArtist(plucked);
+          createArtist(plucked).then((artistR) => {
+            // debugger;
+            startFetchingConcerts(plucked.tm_id, artistR.id);
+          });
         }
       });
   }

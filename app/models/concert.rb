@@ -31,5 +31,5 @@ class Concert < ApplicationRecord
 
   validates :tm_id, uniqueness: true
 
-  # belongs_to :artist
+  belongs_to :artist
 end
