@@ -19,13 +19,13 @@ class Api::ConcertsController < ApplicationController
     if @concert
       render json: @concert
     else
-      render json: ["Cannot find concert with #{params[:id]}"], status: 422
+      render json: ["Cannot find concert with id: #{params[:id]}"], status: 422
     end
   end
 
   private
   def concert_params
-    params.require(:concerts).permit(
+    params.require(:concert).permit(
       :artist_id, :tm_id, :tm_attraction_id, :name, :tm_url,
       :date_time, :local_date, :local_time, :timezone, :image_url,
       :locale, :venue_name, :venue_lat, :venue_long, :venue_address,

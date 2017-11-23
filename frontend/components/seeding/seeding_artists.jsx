@@ -8,6 +8,14 @@ export const fetchFromTMbyArtistName = (artistName) => {
   });
 };
 
+const createArtist = (artist) => {
+  return $.ajax({
+    url: '/api/artists',
+    method: 'POST',
+    data: {artist}
+  });
+};
+
 export const findImageWidth640 = (imagesArray) => {
   for (var i = 0; i < imagesArray.length; i++) {
     if (Number(imagesArray[i].width) === 640) {
@@ -17,6 +25,7 @@ export const findImageWidth640 = (imagesArray) => {
 };
 
 const pluckRelevantFieldsFromFetchedArtist = (res) => {
+  console.log(res);
   // console.log(res._embedded.attractions[0]);
   const artist = res._embedded.attractions[0];
   let name;
@@ -247,16 +256,35 @@ const artistsOfChoice = [
 
 ];
 
+const shortList = [
+  // 'Coldplay',
+  // 'Rihanna',
+  'U2',
+  // 'Eminem',
+  // 'Maroon 5',
+  // 'Adele',
+  // 'Drake',
+  // 'Kanye West',
+  // 'Bruno Mars',
+  // 'Katy Perry'
+];
+
 const startFetchingArtistsFromList = () => {
   let resArr = [];
-  for (var i = 0; i < artistsOfChoice.length; i++) {
-    fetchFromTMbyArtistName(artistsOfChoice[i])
+  for (var i = 0; i < shortList.length; i++) {
+    fetchFromTMbyArtistName(shortList[i])
       .then((res) => {
-        resArr.push(pluckRelevantFieldsFromFetchedArtist(res));
-        console.log(resArr);
+        let plucked = pluckRelevantFieldsFromFetchedArtist(res);
+        if (plucked) {
+          resArr.push(plucked);
+          console.log(resArr);
+          createArtist(plucked);
+        }
       });
   }
   // return resArr;
 };
 
-// window.startFetchingArtistsFromList = startFetchingArtistsFromList;
+
+
+window.startFetchingArtistsFromList = startFetchingArtistsFromList;

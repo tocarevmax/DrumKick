@@ -20,13 +20,13 @@ class Api::ArtistsController < ApplicationController
     if @artist
       render json: @artist
     else
-      render json: ["Cannot find artist with #{params[:id]}"], status: 422
+      render json: ["Cannot find artist with id: #{params[:id]}"], status: 422
     end
   end
 
   private
   def artist_params
-    params.require(:artists).permit(
+    params.require(:artist).permit(
       :tm_id, :name, :image_url, :tm_url, :upcoming_events)
   end
 end

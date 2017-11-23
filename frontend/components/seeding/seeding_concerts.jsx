@@ -17,9 +17,28 @@ export const fetchConcertsFromTMbyAttractionId = (attractionId) => {
   });
 };
 
+const createConcert = (concert) => {
+  return $.ajax({
+    url: '/api/concerts',
+    method: 'POST',
+    data: {concert},
+    success: (res) => {
+                // console.log(res);
+              },
+    error: (res) => {
+                debugger;
+                // console.log(res);
+            }
+  });
+};
+
 
 
 const pluckRelevantFieldsFromFetchedConcerts = (res) => {
+  if (!res._embedded) {
+    return null;
+  }
+
   const eventsArray = res._embedded.events;
   const resArray = [];
   let artist_id, tm_id, tm_attraction_id, name, tm_url, date_time,
@@ -29,12 +48,37 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
 
   for (var i = 0; i < eventsArray.length; i++) {
 
-    console.log(i);
-    console.log(currentEvent);
     let currentEvent = eventsArray[i];
+
+    if (!currentEvent._embedded ||
+        !currentEvent._embedded.venues ||
+        !currentEvent._embedded.venues[0]) {
+      continue;
+    }
+
     let venue = currentEvent._embedded.venues[0];
 
-    // artist_id ; comes from my db
+    if (!currentEvent._embedded.attractions ||
+        !currentEvent._embedded.attractions[0] ||
+        !currentEvent.dates ||
+        !currentEvent.dates.start ||
+        !currentEvent.images ||
+        !venue.location ||
+        !venue.address ||
+        !venue.city ||
+        !venue.state ||
+        !venue.country ||
+        !currentEvent.priceRanges ||
+        !currentEvent.priceRanges[0]
+    ) {
+      continue;
+    }
+
+    console.log(i);
+    console.log(currentEvent);
+
+
+    artist_id = 1;
     tm_id = currentEvent.id;
     tm_attraction_id = currentEvent._embedded.attractions[0].id;
     name = currentEvent.name;
@@ -55,16 +99,24 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
         local_date && local_time && timezone && image_url && locale &&
         venue_name && venue_lat && venue_long && venue_address && price_range) {
 
-      resArray.push({
+      let concert = {
         artist_id, tm_id, tm_attraction_id, name, tm_url, date_time,
         local_date, local_time, timezone, image_url, locale,
-        venue_name, venue_lat, venue_long, venue_address, price_range});
+        venue_name, venue_lat, venue_long, venue_address, price_range};
+
+      // make post ajax request here
+      let postReq = createConcert(concert);
+
+      resArray.push(concert);
     }
   }
-
   console.log(resArray);
   return resArray;
 };
 
-fetchConcertsFromTMbyAttractionId("K8vZ917GC17")
-  .then(pluckRelevantFieldsFromFetchedConcerts);
+const startFetchingConcerts = () => {
+  fetchConcertsFromTMbyAttractionId("K8vZ91712W7")
+    .then(pluckRelevantFieldsFromFetchedConcerts);
+};
+
+window.startFetchingConcerts = startFetchingConcerts;
