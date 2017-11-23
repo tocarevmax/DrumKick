@@ -22,8 +22,9 @@ export const fetchConcertsFromTMbyAttractionId = (attractionId) => {
 const pluckRelevantFieldsFromFetchedConcerts = (res) => {
   const eventsArray = res._embedded.events;
   const resArray = [];
-  let tm_id, name, tm_url, date_time, local_date, local_time, timezone,
-      image_url, locale, venue_name, venue_address, price_range, tm_attraction_id;
+  let tm_id, tm_attraction_id, name, tm_url, date_time,
+      local_date, local_time, timezone, image_url, locale,
+      venue_name, venue_lat, venue_long, venue_address, price_range;
 
 
   for (var i = 0; i < eventsArray.length; i++) {
@@ -34,7 +35,7 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
     let venue = currentEvent._embedded.venues[0];
 
     tm_id = currentEvent.id;
-    // tm_attraction_id =
+    tm_attraction_id = currentEvent._embedded.attractions[0].id;
     name = currentEvent.name;
     tm_url = currentEvent.url;
     date_time = currentEvent.dates.start.dateTime;
@@ -44,16 +45,19 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
     image_url = findImageWidth640(currentEvent.images);
     locale = currentEvent.locale;
     venue_name = venue.name;
+    venue_lat = venue.location.latitude;
+    venue_long = venue.location.longitude;
     venue_address = `${venue.address.line1}, ${venue.city.name}, ${venue.state.stateCode} ${venue.postalCode}, ${venue.country.countryCode}`;
     price_range = `$${currentEvent.priceRanges[0].min} - $${currentEvent.priceRanges[0].max}`;
 
-    if (tm_id && name && tm_url && date_time && local_date &&
-        local_time && timezone && image_url && locale &&
-        venue_name && venue_address && price_range) {
+    if (tm_id && tm_attraction_id && name && tm_url && date_time &&
+        local_date && local_time && timezone && image_url && locale &&
+        venue_name && venue_lat && venue_long && venue_address && price_range) {
 
-      resArray.push({tm_id, tm_attraction_id, name, tm_url, date_time, local_date,
-                    local_time, timezone, image_url, locale,
-                    venue_name, venue_address, price_range});
+      resArray.push({
+        tm_id, tm_attraction_id, name, tm_url, date_time,
+        local_date, local_time, timezone, image_url, locale,
+        venue_name, venue_lat, venue_long, venue_address, price_range});
     }
   }
 
@@ -61,5 +65,5 @@ const pluckRelevantFieldsFromFetchedConcerts = (res) => {
   return resArray;
 };
 
-// fetchConcertsFromTMbyAttractionId("K8vZ917GC17")
-//   .then(pluckRelevantFieldsFromFetchedConcerts);
+fetchConcertsFromTMbyAttractionId("K8vZ917GC17")
+  .then(pluckRelevantFieldsFromFetchedConcerts);
