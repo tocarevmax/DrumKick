@@ -17,6 +17,12 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUpdate(newProps) {
+    if (this.props.match.path != newProps.match.path) {
+      this.props.receiveErrors();
+    }
+  }
+
   handleInput(fieldType) {
     return (e) => this.setState({
       [fieldType]: e.currentTarget.value

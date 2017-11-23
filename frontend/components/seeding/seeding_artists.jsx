@@ -259,4 +259,4 @@ const startFetchingArtistsFromList = () => {
   // return resArr;
 };
 
-window.startFetchingArtistsFromList = startFetchingArtistsFromList;
+// window.startFetchingArtistsFromList = startFetchingArtistsFromList;

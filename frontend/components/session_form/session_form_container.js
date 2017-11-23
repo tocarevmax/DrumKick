@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { login, logout, signup } from '../../actions/session_actions';
+import { login, logout, signup, receiveErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 
@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const pushForm = (pathType === 'login') ? login : signup;
   return {
     pushForm: user => dispatch(pushForm(user)),
+    receiveErrors: () => dispatch(receiveErrors([])),
     pathType
   };
 };
