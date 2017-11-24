@@ -40,6 +40,7 @@ in search component
 
 
 
+changeUISearch({searchPage: true})
 
 ---------------------
 

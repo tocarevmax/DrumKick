@@ -10,6 +10,9 @@ import Root from './components/root';
 
   import {fetchSearchResults} from './actions/search_actions';
   window.fetchSearchResults = fetchSearchResults;
+
+  import {changeUISearch} from './actions/ui_actions';
+  window.changeUISearch = changeUISearch;
 //
 
 

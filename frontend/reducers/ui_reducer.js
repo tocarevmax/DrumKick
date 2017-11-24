@@ -1,24 +1,27 @@
 import { combineReducers } from 'redux';
 
+import {SET_SEARCH_PAGE} from '../actions/ui_actions';
+
 // import filters from './filters_reducer';
 
 // export default combineReducers({
 //   searchPage: false
 // });
 
-export default (state, action) => {
+const _nullState = {searchPage: false};
 
-  // switch (action.type) {
-  //   case SET_SEARCH_PAGE:
-  //       return action.action
-  //     break;
-  //   default:
-      //  return state
-  // }
+export default (state = _nullState, action) => {
 
-  return ({
-    searchPage: false
-  });
+  switch (action.type) {
+    case SET_SEARCH_PAGE:
+        return action.action;
+    default:
+       return state;
+  }
+
+  // return ({
+  //   searchPage: false
+  // });
 };
 
 
