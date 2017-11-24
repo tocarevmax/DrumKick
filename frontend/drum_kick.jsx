@@ -5,8 +5,11 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // remove when done
-import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
-import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
+// import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
+// import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
+
+  import {fetchSearchResults} from './actions/search_actions';
+  window.fetchSearchResults = fetchSearchResults;
 //
 
 
@@ -20,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 // remove when done
-  // window.getState = store.getState;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 //
 
   const root = document.getElementById('root');

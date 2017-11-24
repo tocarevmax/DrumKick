@@ -5,7 +5,7 @@ end
 json.set! :concerts do
   json.array! @concerts, :id, :name, :local_date, :venue_name, :venue_address
 end
-
+#
 # json.set! :artists do
 #   @artists.each do |artist|
 #     json.set! artist.id do
@@ -13,7 +13,7 @@ end
 #     end
 #   end
 # end
-
+#
 # json.set! :concerts do
 #   @concerts.each do |concert|
 #     json.set! concert.id do
