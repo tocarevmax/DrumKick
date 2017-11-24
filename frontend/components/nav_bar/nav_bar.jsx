@@ -2,11 +2,12 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import SessionLinksContainer from '../session_links/session_links_container';
-
+import NavBarSearchFrom from './nav_bar_search_form';
 
 class NavBar extends React.Component {
 
   render() {
+    // debugger;
     return (
       <div className="navigation">
         <div className="navigation-large-screen">
@@ -43,25 +44,10 @@ class NavBar extends React.Component {
             <li className="sub-nav">
               <ul>
                 <li className="search">
-                  <form className="navigation-search-form">
-                    <input
-                      className="text navigation-search"
-                      name="query"
-                      type="search"
-                      placeholder="Find concerts for any artist or city"
-                    >
-
-                  </input>
-                  <button
-                    className="search-button"
-                    type="submit"
-                  >
-                  <img
-                    src="https://assets.sk-static.com/assets/nw/components/navigation-large-screen/search-5510d8d.svg"
-                    className="navigation-submit"
+                  < NavBarSearchFrom
+                      fetchSearchResults={this.props.fetchSearchResults}
+                      changeUISearch={this.props.changeUISearch}
                   />
-                  </button>
-                  </form>
                 </li>
 
                 <li className="login-signup">
@@ -75,5 +61,26 @@ class NavBar extends React.Component {
     );
   }
 }
+
+// <form className="navigation-search-form">
+//   <input
+//     className="text navigation-search"
+//     name="query"
+//     type="search"
+//     placeholder="Find concerts for any artist or city"
+//   >
+//
+// </input>
+// <button
+//   className="search-button"
+//   type="submit"
+// >
+// <img
+//   src="https://assets.sk-static.com/assets/nw/components/navigation-large-screen/search-5510d8d.svg"
+//   className="navigation-submit"
+// />
+// </button>
+// </form>
+
 
 export default withRouter(NavBar);

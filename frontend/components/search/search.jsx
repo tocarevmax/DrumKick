@@ -25,7 +25,10 @@ class Search extends React.Component {
         <h1>This is search</h1>
 
 
-        <SearchIndex search={this.props.search}/>
+        <SearchIndex
+          search={this.props.search}
+          changeUISearch={this.props.changeUISearch}
+        />
 
       </div>
     );

@@ -41,6 +41,7 @@ in search component
 
 
 changeUISearch({searchPage: true})
+dispatch(changeUISearch({searchPage: false}))
 
 ---------------------
 
