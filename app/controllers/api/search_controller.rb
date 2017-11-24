@@ -1,7 +1,7 @@
 class Api::SearchController < ApplicationController
 
   def index
-    if params[:name]
+    if (params[:name] && (!params[:name].empty?))
       @artists = Artist.where('lower(name) ~ ?', params[:name].downcase)
                        .limit(5)
 
