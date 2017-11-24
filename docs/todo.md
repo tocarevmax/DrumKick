@@ -9,6 +9,38 @@ start playing with search -->
 Search container and search component
 
 
+<div className="navigation"> should be its own component
+container for it
+mapDispatchToProps
+  fetchSearchResults
+  changeUISearch   - regular action,
+            type: SET_SEARCH_PAGE
+            action: {searchPage: true/false}
+
+
+mapStateToProps
+  ui
+
+
+  nav search input needs update on change with update local state & fetchSearchResults
+
+  if this.state.empty?
+    dispatch ui action
+          search_page: true/false?
+
+
+--
+
+in search component
+  change uisearch back to false
+
+  changeUISear
+
+  <SearchResultItem onClick={}>
+
+
+
+
 ---------------------
 
 

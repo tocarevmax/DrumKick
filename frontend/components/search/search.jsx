@@ -21,17 +21,9 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main-container">
         <h1>This is search</h1>
-        <form>
-          <label>Search:
-            <input
-              type="text"
-              onChange={this.update.bind(this)}
-              className="search-input"
-            />
-          </label>
-        </form>
+
 
         <SearchIndex search={this.props.search}/>
 
@@ -40,5 +32,16 @@ class Search extends React.Component {
 
   }
 }
+
+// <form>
+//   <label>Search:
+//     <input
+//       type="text"
+//       onChange={this.update.bind(this)}
+//       className="search-input"
+//     />
+//   </label>
+// </form>
+
 
 export default withRouter(Search);
