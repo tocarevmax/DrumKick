@@ -4,6 +4,12 @@
 <!-- build concerts model & controller
 test seeding to actual db
 start playing with search -->
+---------------------
+
+Search container and search component
+
+
+---------------------
 
 
 search with geo-distance
@@ -16,9 +22,9 @@ Concert.all.where('"date_time" > ?', Date.parse('26-06-2018'))
 Date.parse('01-05-2018')
 
 search by name:
-Artist.where('lower(name) ~ ?', "The Chainsmokers".downcase)
+Artist.where('lower(name) ~ ?', "U2".downcase)
 
-Concert.where('lower(name) ~ ?', "at".downcase).limit(5)
+Concert.where('lower(name) ~ ?', "ar".downcase).limit(5)
 
 
 Artist.find(4).upcoming_events == Artist.find(4).concerts.count
