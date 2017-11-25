@@ -3,7 +3,7 @@ json.set! :artists do
 end
 
 json.set! :concerts do
-  json.array! @concerts, :id, :name, :local_date, :venue_name, :venue_address
+  json.array! @concerts, :id, :name, :image_url, :local_date, :venue_name, :venue_address
 end
 #
 # json.set! :artists do

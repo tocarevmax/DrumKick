@@ -1,3 +1,23 @@
-.search-input {
-  border: 1px solid black;
+.search-close {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.search-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: flex-end;
+}
+
+.search-index {
+  flex-direction: column;
+}
+
+.search-image {
+  width: 100px;
+  // height: auto;
 }

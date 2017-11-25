@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import SearchArtistsItem from './search_artists_item';
+import SearchConcertsItem from './search_concerts_item';
 
 class SearchIndex extends React.Component {
 
@@ -23,37 +25,41 @@ class SearchIndex extends React.Component {
       return (<h1>Nothing to render</h1>);
     }
     return (
-      <div>
+      <div className="search-index">
         <h1>Search Results</h1>
         <h3>Artists:</h3>
-        <ul>
-          {this.props.search.artists.map((artist, idx) => (
-            <li
-              key={`artists-key-${idx}`}
-              onClick={this.handleUIChange.bind(this)}
-            >
-              {artist.name}
-            </li>
-          ))}
-        </ul>
-
+          <ul className="search-artists">
+            {this.props.search.artists.map((artist, idx) => (
+              < SearchArtistsItem
+                artist={artist}
+                key={`artists-key-${idx}`}/>
+            ))}
+          </ul>
         <h3>Concerts:</h3>
-        <ul>
-          {this.props.search.concerts.map((concert, idx) => (
-            <li key={`concerts-key-${idx}`}>{concert.name}</li>
-          ))}
-        </ul>
+          <ul className="search-concerts">
+            {this.props.search.concerts.map((concert, idx) => (
+              < SearchConcertsItem
+                concert={concert}
+                key={`concerts-key-${idx}`}/>
+            ))}
+          </ul>
 
       </div>
     );
   }
 }
 
-// const SearchIndex = ({search, changeUISearch}) => {
-//
-//
-//
-//
-// };
+// <ul>
+//   {this.props.search.artists.map((artist, idx) => (
+//     <li
+//       key={`artists-key-${idx}`}
+//       onClick={this.handleUIChange.bind(this)}
+//     >
+//       {artist.name}
+//     </li>
+//   ))}
+// </ul>
+
+
 
 export default withRouter(SearchIndex);
