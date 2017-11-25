@@ -33,7 +33,7 @@ class NavBarSearchFrom extends React.Component {
             type="text"
             name="query"
             onChange={this.update.bind(this)}
-            placeholder="Find concerts for any artist or city"
+            placeholder="Find concerts for any artist"
           />
 
           <button
