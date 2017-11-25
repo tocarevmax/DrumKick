@@ -15,11 +15,13 @@ class Search extends React.Component {
     return (
       <div className="main-container">
         <div className="search-container">
-          <a onClick={this.handleUIChange.bind(this)}
-             className="search-close"
-          >
-            <img src="http://cdn.onlinewebfonts.com/svg/img_161345.png"/>
-          </a>
+          <div className="close-div">
+            <a onClick={this.handleUIChange.bind(this)}
+               className="search-close"
+            >
+              <img src="http://cdn.onlinewebfonts.com/svg/img_161345.png"/>
+            </a>
+          </div>
           <SearchIndex
             search={this.props.search}
             changeUISearch={this.props.changeUISearch}

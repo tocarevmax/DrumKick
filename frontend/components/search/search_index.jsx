@@ -26,8 +26,7 @@ class SearchIndex extends React.Component {
     }
     return (
       <div className="search-index">
-        <h1>Search Results</h1>
-        <h3>Artists:</h3>
+        <h1 className="search-category-divider">Artists</h1>
           <ul className="search-artists">
             {this.props.search.artists.map((artist, idx) => (
               < SearchArtistsItem
@@ -35,7 +34,7 @@ class SearchIndex extends React.Component {
                 key={`artists-key-${idx}`}/>
             ))}
           </ul>
-        <h3>Concerts:</h3>
+        <h1 className="search-category-divider">Concerts</h1>
           <ul className="search-concerts">
             {this.props.search.concerts.map((concert, idx) => (
               < SearchConcertsItem

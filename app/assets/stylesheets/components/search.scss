@@ -9,15 +9,114 @@
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  align-items: flex-end;
+  // border: 1px solid red;
+  align-items: center;
+  font-family: 'helvetica neue',helvetica,arial,sans-serif;
+}
+
+.close-div {
+  display: flex;
+  justify-content: flex-end;
+  width: 1050px;
 }
 
 .search-index {
   flex-direction: column;
+  // border: 1px solid green;
+  width: 800px;
+}
+
+.search-category-divider {
+  background-color: #1e2126;
+  color: #fff;
+  padding: 10px 0;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .search-image {
-  width: 100px;
-  // height: auto;
+  max-width: 230px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+
+
+.search-artists {
+  flex-direction: column;
+}
+
+.search-concerts {
+  flex-direction: column;
+}
+
+.search-artists-item, .search-concerts-item {
+  flex-direction: row;
+  height: 100px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #c7c7c7;
+  justify-content: space-between;
+  padding: 0 20px 20px 20px;
+}
+
+.search-artists-item-info {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-artists-item-info h1,
+.search-concerts-item-info h1 {
+  font-weight: bold;
+  color: #066792;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.search-artists-item-info h1:hover,
+.search-concerts-item-info h1:hover {
+  text-decoration: underline;
+}
+
+.track-artist-search-button {
+  background-color: #f80046;
+  color: #fff;
+  border-color: #f80046;
+  cursor: pointer;
+  vertical-align: baseline;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,.2);
+  line-height: 26px;
+  width: 108px;
+  height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 0;
+  justify-content: center;
+}
+
+
+.search-concerts-item-info {
+  flex-direction: column;
+  // align-items: stretch;
+  justify-content: space-between;
+
+}
+
+.search-concerts-item-info  h3 {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-concerts-item-date-name, .search-concert-venue {
+  flex-direction: column;
+}
+
+.search-concert-venue h3 {
+  font-weight: 400;
 }

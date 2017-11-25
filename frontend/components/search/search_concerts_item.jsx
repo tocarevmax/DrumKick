@@ -9,16 +9,34 @@ const convertTime = (local_date) => {
   return `${mm}/${dd}/${yyyy}`;
 };
 
+const extractCityState = (str) => {
+  let firstComma = str.indexOf(',');
+  let slicedStr = str.slice(firstComma+2);
+  let secondComma = slicedStr.indexOf(',');
+  let finalStr = slicedStr.slice(0, secondComma+4);
+  return finalStr;
+};
+
 export default ({concert}) => {
   return (
     <li className="search-concerts-item">
-      <Link to={`concerts/${concert.id}`}><h1>{concert.name}</h1></Link>
-      <img className="search-image" src={concert.image_url}/>
-      <div className="search-concerts-venue">
-        <h3>{convertTime(concert.local_date)}</h3>
-        <h3>{concert.venue_name}</h3>
-        <h3>{concert.venue_address}</h3>
+      <div className="search-concerts-item-info">
+        <div className="search-concerts-item-date-name">
+
+
+          <h3 className="search-concert-date">{convertTime(concert.local_date)}</h3>
+          <Link
+            to={`concerts/${concert.id}`}
+            className="search-concert-name">
+            <h1>{concert.name}</h1>
+          </Link>
+        </div>
+        <div className="search-concert-venue">
+          <h3 className="search-concert-venue-name">{concert.venue_name}</h3>
+          <h3 className="search-concert-venue-address">{extractCityState(concert.venue_address)}</h3>
+        </div>
       </div>
+      <img className="search-image" src={concert.image_url}/>
     </li>
   );
 };
