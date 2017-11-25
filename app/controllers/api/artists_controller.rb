@@ -15,10 +15,10 @@ class Api::ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find_by(id: params[:id])
+    @artist = Artist.includes(:concerts).find_by(id: params[:id])
 
     if @artist
-      render json: @artist
+      render :show
     else
       render json: ["Cannot find artist with id: #{params[:id]}"], status: 422
     end

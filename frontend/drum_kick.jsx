@@ -8,11 +8,14 @@ import Root from './components/root';
 // import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
 // import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
 
-  import {fetchSearchResults} from './actions/search_actions';
-  window.fetchSearchResults = fetchSearchResults;
+  // import {fetchSearchResults} from './actions/search_actions';
+  // window.fetchSearchResults = fetchSearchResults;
+  //
+  // import {changeUISearch} from './actions/ui_actions';
+  // window.changeUISearch = changeUISearch;
 
-  import {changeUISearch} from './actions/ui_actions';
-  window.changeUISearch = changeUISearch;
+  import {fetchArtist} from './actions/artists_actions';
+  window.fetchArtist = fetchArtist;
 //
 
 
