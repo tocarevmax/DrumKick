@@ -20,8 +20,11 @@ import Root from './components/root';
   // import {fetchConcert} from './util/concerts_api_util';
   // window.fetchConcert = fetchConcert;
 
-  import {fetchConcert} from './actions/concerts_actions';
-  window.fetchConcert = fetchConcert;
+  // import {fetchConcert} from './actions/concerts_actions';
+  // window.fetchConcert = fetchConcert;
+
+  import {fetchArtists} from './util/artists_api_util';
+  window.fetchArtists = fetchArtists;
 
 //
 

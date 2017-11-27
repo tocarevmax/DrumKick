@@ -4,3 +4,10 @@ export const fetchArtist = (artistId) => (
     url: `/api/artists/${artistId}`
   })
 );
+
+export const fetchArtists = () => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/artists/`
+  })
+);

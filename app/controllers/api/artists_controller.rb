@@ -2,7 +2,12 @@ class Api::ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
-    render json: @artists
+                     .order('upcoming_events DESC')
+                     .limit(10)
+
+    @artists = @artists.shuffle
+
+    render :index
   end
 
   def create
