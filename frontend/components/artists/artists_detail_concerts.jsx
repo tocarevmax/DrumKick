@@ -14,18 +14,22 @@ class ArtistsDetailConcerts extends React.Component {
     const localConcerts = this.props.localConcerts.map((concert, idx) => (
       <ArtistsDetailConcertsItem key={`local-concert-${idx}`} concert={concert}/>
     ));
-    debugger;
+
+    const nearYou = localConcerts.length > 0 ?
+        <h1 className="artists-detail-category-h1">Tickets on sale near you</h1>
+        : null;
+
     return (
       <div className="artists-detail-concerts">
         <div className="artists-detail-local-concerts">
-          <h1>Tickets on sale near you</h1>
+          {nearYou}
           <ul className="artists-detail-local-concerts-ul">
             {localConcerts}
           </ul>
         </div>
 
         <div className="artists-detail-all-concerts">
-          <h1>{`Upcoming concets (${concerts.length})`}</h1>
+          <h1 className="artists-detail-category-h1">{`Upcoming concerts (${concerts.length})`}</h1>
           <ul className="artists-detail-all-concerts-ul">
             {concerts}
           </ul>

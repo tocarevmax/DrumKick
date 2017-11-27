@@ -6,10 +6,6 @@
 
 }
 
-.artists-detail-concerts {
-  background-color: red;
-  padding: 20px;
-}
 
 .artist-header {
   flex-direction: row;
@@ -17,7 +13,6 @@
   height: 380px;
   background-color: #082b44;
   background-image: linear-gradient(-50deg,#004261 21%,#00344c 79%);
-  margin-bottom: 20px;
   color: white;
 }
 
@@ -93,11 +88,18 @@
   // min-width: 130px;
   // min-height: 22px;
   width: 178px;
-  height: 25px;
+  height: 26px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   justify-content: center;
 }
 
-// transition: transform .3s
+.ticket-info strong {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.artists-detail-ci-price-buy {
+  align-items: center;
+}
