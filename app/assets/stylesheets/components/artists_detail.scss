@@ -1,0 +1,98 @@
+.artists-detail-main {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  margin-top: 10px;
+
+}
+
+.artists-detail-concerts {
+  background-color: red;
+  padding: 20px;
+}
+
+.artist-header {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 380px;
+  background-color: #082b44;
+  background-image: linear-gradient(-50deg,#004261 21%,#00344c 79%);
+  margin-bottom: 20px;
+  color: white;
+}
+
+.artists-detail-image {
+  margin: 10px;
+}
+
+
+
+.artists-detail-image img {
+  max-width: 540px;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
+
+.artists-detail-primary {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.artists-detail-primary h1 {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.1em;
+}
+
+.artists-detail-primary h3 {
+  display: flex;
+  font-weight: 400;
+}
+
+.artists-detail-primary h3 strong {
+  padding-left: 5px;
+  font-weight: bold;
+
+}
+
+.verified-artist {
+  height: 25px;
+  min-width: 25px;
+  background-color: #2096fa;
+  border-radius: 50%;
+  vertical-align: top;
+  background-image: url(https://assets.sk-static.com/assets/nw/elements/attendance-buttons/tick-8596038.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  margin-right: -30px;
+  margin-left: 2px;
+  margin-top: 10px;
+}
+
+.artists-detail-track-button {
+  background-color: #F61253;
+  padding: 5px 50px;
+  cursor: pointer;
+  vertical-align: baseline;
+  font-weight: 700;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.2);
+  font-size: 12px;
+  line-height: 26px;
+  // min-width: 130px;
+  // min-height: 22px;
+  width: 178px;
+  height: 25px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+}

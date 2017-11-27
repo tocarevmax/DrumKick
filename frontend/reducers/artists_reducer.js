@@ -7,7 +7,6 @@ const artistsReducer = (state = {}, action) => {
   let newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_ARTIST:
-    debugger;
       return merge(newState, {[action.artist.id]: action.artist});
     default:
       return state;

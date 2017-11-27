@@ -26,7 +26,7 @@ export default ({concert}) => {
 
           <h3 className="search-concert-date">{convertTime(concert.local_date)}</h3>
           <Link
-            to={`concerts/${concert.id}`}
+            to={`/concerts/${concert.id}`}
             className="search-concert-name">
             <h1>{concert.name}</h1>
           </Link>

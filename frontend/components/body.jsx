@@ -17,13 +17,16 @@ import SplashPage from './splash_page/splash_page';
 import Footer from './footer/footer';
 import SearchContainer from './search/search_container';
 
+import ArtistsContainer from './artists/artists_detail_container';
+
+
 const Body = () => (
   <div className="main-container">
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/protected" component={TestProtectedContainer} />
-
+      <Route path="/artists/:artistId" component={ArtistsContainer} />
       <Route path="/" component={SplashPage} />
     </Switch>
   </div>
