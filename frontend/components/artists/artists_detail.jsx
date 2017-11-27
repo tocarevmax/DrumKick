@@ -32,7 +32,10 @@ class Artists extends React.Component {
 
     const onTour = artist.upcoming_events ? "yes" : "no";
     const renderDetails = onTour === "yes" ?
-                  <ArtistsDetailConcerts concerts={artist.concerts} /> : null;
+                  <ArtistsDetailConcerts
+                    concerts={artist.concerts}
+                    localConcerts={artist.localConcerts}
+                  /> : null;
 
     return (
       <div className="artists-detail-main">
