@@ -5,8 +5,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // remove when done
-import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
-import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
+// import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
+// import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
 
   // import {fetchSearchResults} from './actions/search_actions';
   // window.fetchSearchResults = fetchSearchResults;
@@ -14,8 +14,15 @@ import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_co
   // import {changeUISearch} from './actions/ui_actions';
   // window.changeUISearch = changeUISearch;
 
-  import {fetchArtist} from './actions/artists_actions';
-  window.fetchArtist = fetchArtist;
+  // import {fetchArtist} from './actions/artists_actions';
+  // window.fetchArtist = fetchArtist;
+
+  // import {fetchConcert} from './util/concerts_api_util';
+  // window.fetchConcert = fetchConcert;
+
+  import {fetchConcert} from './actions/concerts_actions';
+  window.fetchConcert = fetchConcert;
+
 //
 
 
