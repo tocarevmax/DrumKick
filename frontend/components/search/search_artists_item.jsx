@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 
 
 
-export default ({artist}) => {
+export default ({artist, handleUIChange}) => {
   return (
     <li className="search-artists-item">
       <div className="search-artists-item-wrapper">
         <div className="search-artists-item-info">
-          <Link to={`/artists/${artist.id}`}><h1>{artist.name}</h1></Link>
+          <Link to={`/artists/${artist.id}`}
+                onClick={handleUIChange}
+          ><h1>{artist.name}</h1></Link>
           <span>{`${artist.upcoming_events} concerts`}</span>
         </div>
         <button className="track-artist-search-button">Track artist</button>

@@ -31,6 +31,7 @@ class SearchIndex extends React.Component {
             {this.props.search.artists.map((artist, idx) => (
               < SearchArtistsItem
                 artist={artist}
+                handleUIChange = {this.handleUIChange.bind(this)}
                 key={`artists-key-${idx}`}/>
             ))}
           </ul>
@@ -39,6 +40,7 @@ class SearchIndex extends React.Component {
             {this.props.search.concerts.map((concert, idx) => (
               < SearchConcertsItem
                 concert={concert}
+                handleUIChange = {this.handleUIChange.bind(this)}
                 key={`concerts-key-${idx}`}/>
             ))}
           </ul>

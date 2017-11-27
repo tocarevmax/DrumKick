@@ -17,7 +17,7 @@ const extractCityState = (str) => {
   return finalStr;
 };
 
-export default ({concert}) => {
+export default ({concert, handleUIChange}) => {
   return (
     <li className="search-concerts-item">
       <div className="search-concerts-item-info">
@@ -27,7 +27,9 @@ export default ({concert}) => {
           <h3 className="search-concert-date">{convertTime(concert.local_date)}</h3>
           <Link
             to={`/concerts/${concert.id}`}
-            className="search-concert-name">
+            className="search-concert-name"
+            onClick={handleUIChange}
+          >
             <h1>{concert.name}</h1>
           </Link>
         </div>
