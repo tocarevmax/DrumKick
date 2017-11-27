@@ -23,7 +23,7 @@ import Root from './components/root';
   // import {fetchConcert} from './actions/concerts_actions';
   // window.fetchConcert = fetchConcert;
 
-  import {fetchArtists} from './util/artists_api_util';
+  import {fetchArtists} from './actions/artists_actions';
   window.fetchArtists = fetchArtists;
 
 //
