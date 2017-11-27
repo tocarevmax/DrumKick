@@ -37,9 +37,16 @@
   margin-bottom: 10px;
 }
 
+.search-img-wrapper {
+  max-width: 150px;
+
+}
+
 .search-image {
-  max-width: 230px;
+  max-width: 150px;
   max-height: 100px;
+  object-fit: cover;
+  object-position: center;
   width: auto;
   height: auto;
   border-radius: 5px;

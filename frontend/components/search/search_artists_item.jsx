@@ -14,7 +14,9 @@ export default ({artist}) => {
         </div>
         <button className="track-artist-search-button">Track artist</button>
       </div>
-      <img className="search-image" src={artist.image_url}/>
+      <div className="search-img-wrapper">
+        <img className="search-image" src={artist.image_url}/>
+      </div>
     </li>
   );
 };

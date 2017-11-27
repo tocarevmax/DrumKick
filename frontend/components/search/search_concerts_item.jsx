@@ -36,7 +36,9 @@ export default ({concert}) => {
           <h3 className="search-concert-venue-address">{extractCityState(concert.venue_address)}</h3>
         </div>
       </div>
-      <img className="search-image" src={concert.image_url}/>
+      <div className="search-img-wrapper">
+        <img className="search-image" src={concert.image_url}/>
+      </div>
     </li>
   );
 };

@@ -23,13 +23,16 @@
 
 .artists-detail-image {
   margin: 10px;
+  max-width: 580px;
 }
 
 
 
 .artists-detail-image img {
-  max-width: 540px;
+  max-width: 580px;
   max-height: 380px;
+  object-fit: cover;
+  object-position: center;
   width: auto;
   height: auto;
   border-radius: 5px;
@@ -96,3 +99,5 @@
   text-transform: uppercase;
   justify-content: center;
 }
+
+// transition: transform .3s
