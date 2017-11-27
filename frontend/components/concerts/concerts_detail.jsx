@@ -25,10 +25,30 @@ class ConcertsDetail extends React.Component {
       );
     }
 
+    const onTour = concert.artist.upcoming_events ? "yes" : "no";
+
+
     return (
-      <div>
-        <h1> This is concert detail </h1>
-        <h3>{concert.name}</h3>
+      <div className="artists-detail-main">
+        <div className="artist-header">
+          <div className="artists-detail-primary">
+            <h1>{concert.artist.name}
+              <span className="verified-artist"></span>
+            </h1>
+            <h3>
+              On tour: <strong>{onTour}</strong>
+            </h3>
+
+            <button className="artists-detail-track-button">
+              track artist
+            </button>
+          </div>
+
+          <div className="artists-detail-image">
+            <img src={concert.image_url}/>
+          </div>
+        </div>
+        
       </div>
     );
   }
