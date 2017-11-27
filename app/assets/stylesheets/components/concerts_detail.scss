@@ -1,0 +1,41 @@
+.concerts-detail-main {
+  flex-direction: column;
+  padding: 30px 100px;
+  align-items: center;
+}
+
+.concerts-detail-main h1 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.concerts-detail-venue {
+  flex-direction: column;
+  align-items: center;
+}
+
+.concerts-detail-venue h2 {
+  padding: 20px 0;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+
+}
+
+.concerts-detail-venue h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+
+.concerts-detail-time h3 {
+  padding: 0 5px;
+  text-align: center;
+}
+
+.concerts-detail-time {
+  padding-bottom: 50px;
+}

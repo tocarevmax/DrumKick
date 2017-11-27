@@ -47,6 +47,11 @@
   font-size: 60px;
   font-weight: 300;
   line-height: 1.1em;
+  transition-duration: 0.5s
+}
+
+.artists-detail-primary h1:hover {
+  color: #9BDDFF;
 }
 
 .artists-detail-primary h3 {

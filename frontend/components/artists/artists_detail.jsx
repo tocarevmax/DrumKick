@@ -41,9 +41,11 @@ class Artists extends React.Component {
       <div className="artists-detail-main">
         <div className="artist-header">
           <div className="artists-detail-primary">
-            <h1>{artist.name}
-              <span className="verified-artist"></span>
-            </h1>
+            <Link to={`/artists/${artist.id}`}>
+              <h1>{artist.name}
+                <span className="verified-artist"></span>
+              </h1>
+            </Link>
             <h3>
               On tour: <strong>{onTour}</strong>
             </h3>

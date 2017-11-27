@@ -5,7 +5,6 @@ class ArtistsDetailConcertsItem extends React.Component {
 
 
   convertTime (local_date) {
-    // debugger;
     let yyyy = local_date.slice(0,4);
     let mm = local_date.slice(5,7);
     let dd = local_date.slice(8);
