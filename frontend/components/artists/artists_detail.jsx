@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import ArtistsDetailConcerts from './artists_detail_concerts';
+
 class Artists extends React.Component {
 
   constructor(props) {
@@ -20,7 +22,6 @@ class Artists extends React.Component {
   render() {
     const artist = this.props.artists[`${this.props.match.params.artistId}`];
 
-
     if (!artist) {
       return (
         <div>
@@ -30,6 +31,8 @@ class Artists extends React.Component {
     }
 
     const onTour = artist.upcoming_events ? "yes" : "no";
+    const renderDetails = onTour === "yes" ?
+                  <ArtistsDetailConcerts concerts={artist.concerts} /> : null;
 
     return (
       <div className="artists-detail-main">
@@ -51,10 +54,7 @@ class Artists extends React.Component {
             <img src={artist.image_url}/>
           </div>
         </div>
-
-        <div className="artists-detail-concerts">
-          
-        </div>
+        {renderDetails}
       </div>
     );
   }

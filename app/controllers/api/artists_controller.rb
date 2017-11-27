@@ -15,7 +15,16 @@ class Api::ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.includes(:concerts).find_by(id: params[:id])
+    @artist = Artist.find_by(id: params[:id])
+
+    @local_concerts = @artist.concerts
+                          .within(100, :origin => [37.792,-122.393])
+                          .where('"date_time" > ?', Date.today)
+                          .order('date_time ASC')
+
+    @artist_concerts = @artist.concerts
+                          .where('"date_time" > ?', Date.today)
+                          .order('date_time ASC')
 
     if @artist
       render :show
