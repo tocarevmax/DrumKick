@@ -18,7 +18,7 @@ import Footer from './footer/footer';
 import SearchContainer from './search/search_container';
 
 import ArtistsContainer from './artists/artists_detail_container';
-
+import ConcertsContainer from './concerts/concerts_detail_container';
 
 const Body = () => (
   <div className="main-container">
@@ -27,6 +27,7 @@ const Body = () => (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/protected" component={TestProtectedContainer} />
       <Route path="/artists/:artistId" component={ArtistsContainer} />
+      <Route path="/concerts/:concertId" component={ConcertsContainer} />
       <Route path="/" component={SplashPage} />
     </Switch>
   </div>
