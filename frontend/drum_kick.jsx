@@ -17,14 +17,14 @@ import Root from './components/root';
   // import {fetchArtist} from './actions/artists_actions';
   // window.fetchArtist = fetchArtist;
 
-  // import {fetchConcert} from './util/concerts_api_util';
-  // window.fetchConcert = fetchConcert;
+  import {fetchConcerts} from './util/concerts_api_util';
+  window.fetchConcerts = fetchConcerts;
 
   // import {fetchConcert} from './actions/concerts_actions';
   // window.fetchConcert = fetchConcert;
 
-  import {fetchArtists} from './actions/artists_actions';
-  window.fetchArtists = fetchArtists;
+  // import {fetchArtists} from './actions/artists_actions';
+  // window.fetchArtists = fetchArtists;
 
 //
 

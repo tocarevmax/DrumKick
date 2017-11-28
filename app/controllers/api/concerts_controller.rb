@@ -1,8 +1,25 @@
 class Api::ConcertsController < ApplicationController
 
   def index
-    @concerts = Concert.all
-    render json: @concerts
+
+    query = Concert.within(100, :origin => [37.792,-122.393])
+                   .where('"date_time" > ?', Date.today)
+                   .order('date_time ASC')
+                   .limit(25)
+
+    @concerts = []
+    names_pushed = []
+
+    query.each do |concert|
+      unless names_pushed.include?(concert.name)
+        @concerts.push(concert)
+        names_pushed.push(concert.name)
+      end
+    end
+
+    @concerts = @concerts.first(10)
+
+    render 'api/concerts/index'
   end
 
   def create
