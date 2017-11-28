@@ -3,11 +3,11 @@ import { Link, withRouter } from 'react-router-dom';
 
 import SessionLinksContainer from '../session_links/session_links_container';
 import NavBarSearchFrom from './nav_bar_search_form';
+import DropdownArtistsContainer from '../dropdown-artists/dropdown-artists-container';
 
 class NavBar extends React.Component {
 
   render() {
-    // debugger;
     return (
       <div className="navigation">
         <div className="navigation-large-screen">
@@ -30,6 +30,7 @@ class NavBar extends React.Component {
                   <Link to="/">
                     Artists
                   </Link>
+                  < DropdownArtistsContainer />
                 </li>
 
                 <li className="nav-item about-us">
