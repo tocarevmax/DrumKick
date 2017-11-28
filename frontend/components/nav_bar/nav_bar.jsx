@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import SessionLinksContainer from '../session_links/session_links_container';
 import NavBarSearchFrom from './nav_bar_search_form';
 import DropdownArtistsContainer from '../dropdown-artists/dropdown-artists-container';
+import DropdownConcertsContainer from '../dropdown-concerts/dropdown-concerts-container';
 
 class NavBar extends React.Component {
 
@@ -21,6 +22,7 @@ class NavBar extends React.Component {
                 </li>
 
                 <li className="nav-item metro-area menu hover-for-touch">
+                  < DropdownConcertsContainer />
                   <Link to="/">
                     SF Bay Area concerts
                   </Link>

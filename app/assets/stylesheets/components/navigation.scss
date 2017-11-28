@@ -175,7 +175,7 @@
   display: block;
   top: 32px;
   width: 480px;
-  height: 350px;
+  height: 330px;
 }
 
 .hover-for-touch {
@@ -185,13 +185,19 @@
 .popular-artists {
   display: flex;
   flex-wrap: wrap;
+}
+
+.listing {
+  height: 100%;
   border-bottom: 1px solid white;
+
 }
 
 .dd-artist-item-name {
   display: flex;
   width: 50%;
-  margin: 10px 0;
+  margin: 5px 0;
+  padding: 0;
   align-items: center;
 }
 
@@ -209,4 +215,17 @@
   width: auto;
   height: auto;
   border-radius: 5px;
+}
+
+.dd-artist-item-name a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.dd-artist-item-name a h1 {
+  line-height: 1.5em;
 }
