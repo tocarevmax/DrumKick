@@ -17,11 +17,11 @@ import Root from './components/root';
   // import {fetchArtist} from './actions/artists_actions';
   // window.fetchArtist = fetchArtist;
 
-  import {fetchConcerts} from './util/concerts_api_util';
-  window.fetchConcerts = fetchConcerts;
+  // import {fetchConcerts} from './util/concerts_api_util';
+  // window.fetchConcerts = fetchConcerts;
 
-  // import {fetchConcert} from './actions/concerts_actions';
-  // window.fetchConcert = fetchConcert;
+  import {fetchConcerts} from './actions/concerts_actions';
+  window.fetchConcerts = fetchConcerts;
 
   // import {fetchArtists} from './actions/artists_actions';
   // window.fetchArtists = fetchArtists;
