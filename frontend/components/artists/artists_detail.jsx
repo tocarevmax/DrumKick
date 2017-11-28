@@ -3,6 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 
 import ArtistsDetailConcerts from './artists_detail_concerts';
 
+import TrackButtonContainer from '../track_button/track_button_container';
+
 class Artists extends React.Component {
 
   constructor(props) {
@@ -50,9 +52,7 @@ class Artists extends React.Component {
               On tour: <strong>{onTour}</strong>
             </h3>
 
-            <button className="artists-detail-track-button">
-              track artist
-            </button>
+            <TrackButtonContainer artistId = {artist.id}/>
           </div>
 
           <div className="artists-detail-image">
