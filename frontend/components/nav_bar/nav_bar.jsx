@@ -27,10 +27,10 @@ class NavBar extends React.Component {
                 </li>
 
                 <li className="nav-item artists menu hover-for-touch">
+                  < DropdownArtistsContainer />
                   <Link to="/">
                     Artists
                   </Link>
-                  < DropdownArtistsContainer />
                 </li>
 
                 <li className="nav-item about-us">

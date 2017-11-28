@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import DropdownArtistsItem from './dropdown-artists-item';
+
 class DropdownArtists extends React.Component {
 
   componentDidMount() {
@@ -13,12 +15,10 @@ class DropdownArtists extends React.Component {
     const artists = this.props.artists;
 
     if (!artists[0]) {
-      return (
-        <div>
-          <h1>Loading</h1>
-        </div>
-      );
+      return null;
     }
+
+    // const mappedArtists =
 
     return (
       <div className="menu-content">
@@ -27,7 +27,6 @@ class DropdownArtists extends React.Component {
             <li>{artists[0].name}</li>
           </ul>
         </div>
-        <h1>{"this is dropdown"}</h1>
       </div>
     );
   }

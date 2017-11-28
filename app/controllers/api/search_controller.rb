@@ -6,7 +6,7 @@ class Api::SearchController < ApplicationController
                        .order('upcoming_events DESC')
                        .limit(5)
 
-      @artists = @artists.shuffle
+      # @artists = @artists.shuffle
 
       @concerts = Concert.where('lower(name) ~ ?', params[:name].downcase)
                          .where('"date_time" > ?', Date.today)
