@@ -1,7 +1,14 @@
-export const fetchTracking = (trackingId) => (
+export const fetchAllTrackings = () => (
   $.ajax({
     method: 'GET',
-    url: `/api/trackings/${trackingId}`
+    url: '/api/trackings/'
+  })
+);
+
+export const fetchTracking = (artistId) => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/trackings/${artistId}`
   })
 );
 
@@ -13,9 +20,9 @@ export const createTracking = (artist_id) => (
   })
 );
 
-export const deleteTracking = (trackingId) => (
+export const deleteTracking = (artistId) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/trackings/${trackingId}`
+    url: `/api/trackings/${artistId}`
   })
 );

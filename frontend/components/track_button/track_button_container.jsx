@@ -8,9 +8,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchTracking: (id) => dispatch(fetchTracking(id)),
+  fetchTracking: (artistId) => dispatch(fetchTracking(artistId)),
   createTracking: (artistId) => dispatch(createTracking(artistId)),
-  deleteTracking: (id) => dispatch(deleteTracking(id))
+  deleteTracking: (artistId) => dispatch(deleteTracking(artistId))
 });
 
 export default connect(

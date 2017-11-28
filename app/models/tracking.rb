@@ -11,6 +11,7 @@
 
 class Tracking < ApplicationRecord
   validates :user_id, :artist_id, presence: true
+  validates_uniqueness_of :user_id, :scope => [:artist_id]
 
   belongs_to :user
   belongs_to :artist
