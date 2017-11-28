@@ -18,6 +18,12 @@ class Artist < ApplicationRecord
 
   has_many :concerts
 
+  has_many :trackings
+
+  has_many :trackers,
+    through: :trackings,
+    source: :user
+
   def self.update_upcoming_events
     Artist.all.each do |artist|
       p artist.name

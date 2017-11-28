@@ -62,3 +62,13 @@ Concert.where('lower(name) ~ ?', "ar".downcase).limit(5)
 
 
 Artist.find(4).upcoming_events == Artist.find(4).concerts.count
+
+--
+
+Tracking.create(user_id: 1, artist_id: 3)
+Tracking.create(user_id: 1, artist_id: 4)
+Tracking.create(user_id: 1, artist_id: 5)
+
+Tracking.create(user_id: 2, artist_id: 3)
+Tracking.create(user_id: 2, artist_id: 4)
+Tracking.create(user_id: 2, artist_id: 5)
