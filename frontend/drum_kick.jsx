@@ -5,27 +5,16 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // remove when done
-// import {fetchFromTMbyArtistName} from './components/seeding/seeding_artists.jsx';
-// import {fetchConcertsFromTMbyAttractionId} from './components/seeding/seeding_concerts.jsx';
 
-  // import {fetchSearchResults} from './actions/search_actions';
-  // window.fetchSearchResults = fetchSearchResults;
-  //
-  // import {changeUISearch} from './actions/ui_actions';
-  // window.changeUISearch = changeUISearch;
+  import {fetchTracking, createTracking, deleteTracking} from './actions/trackings_actions';
+  window.fetchTracking = fetchTracking;
+  window.createTracking = createTracking;
+  window.deleteTracking = deleteTracking;
 
-  // import {fetchArtist} from './actions/artists_actions';
-  // window.fetchArtist = fetchArtist;
-
-  // import {fetchConcerts} from './util/concerts_api_util';
-  // window.fetchConcerts = fetchConcerts;
-
-  // import {fetchConcerts} from './actions/concerts_actions';
-  // window.fetchConcerts = fetchConcerts;
-
-  // import {fetchArtists} from './actions/artists_actions';
-  // window.fetchArtists = fetchArtists;
-
+  // import {createTracking, deleteTracking, fetchTracking} from './util/trackings_api_util';
+  // window.createTracking = createTracking;
+  // window.deleteTracking = deleteTracking;
+  // window.fetchTracking = fetchTracking;
 //
 
 
