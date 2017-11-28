@@ -18,13 +18,15 @@ class DropdownArtists extends React.Component {
       return null;
     }
 
-    // const mappedArtists =
+    const mappedArtists = artists.map((artist, idx) => (
+      < DropdownArtistsItem key={`dd-artist${idx}`} artist={artist} />
+    ));
 
     return (
       <div className="menu-content">
         <div className="listing">
           <ul className="popular-artists">
-            <li>{artists[0].name}</li>
+            {mappedArtists}
           </ul>
         </div>
       </div>

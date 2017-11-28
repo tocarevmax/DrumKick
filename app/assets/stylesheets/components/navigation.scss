@@ -152,15 +152,15 @@
   opacity: 1;
 }
 
-// .menu-content {
-//   transition-timing-function: ease-out;
-//   transition-delay: 200ms;
-//   transition-duration: 200ms;
-// }
-//
-// .menu:hover .menu-content {
-//   transition-timing-function: ease-in;
-// }
+.menu-content {
+  transition-timing-function: ease-out;
+  transition-delay: 200ms;
+  transition-duration: 200ms;
+}
+
+.menu:hover .menu-content {
+  transition-timing-function: ease-in;
+}
 
 .menu-content {
   visibility: hidden;
@@ -175,9 +175,38 @@
   display: block;
   top: 32px;
   width: 480px;
-  height: 410px;
+  height: 350px;
 }
 
 .hover-for-touch {
   position: relative;
+}
+
+.popular-artists {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid white;
+}
+
+.dd-artist-item-name {
+  display: flex;
+  width: 50%;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.dd-artist-item-img-wrapper {
+  max-width: 35px;
+  max-height: 35px;
+  margin-right: 5px;
+}
+
+.dd-artist-item-img-wrapper img {
+  max-width: 35px;
+  max-height: 35px;
+  object-fit: cover;
+  object-position: center;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
 }
