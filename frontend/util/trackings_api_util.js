@@ -8,7 +8,7 @@ export const fetchAllTrackings = () => (
 export const fetchTracking = (artistId) => (
   $.ajax({
     method: 'GET',
-    url: `/api/trackings/${artistId}`
+    url: `/api/trackings/${artistId}`,
   })
 );
 
