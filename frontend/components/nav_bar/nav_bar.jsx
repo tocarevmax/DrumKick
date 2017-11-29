@@ -35,12 +35,6 @@ class NavBar extends React.Component {
                   </Link>
                 </li>
 
-                <li className="nav-item about-us">
-                  <Link to="/">
-                    About us
-                  </Link>
-                </li>
-
               </ul>
             </li>
 
