@@ -12,8 +12,8 @@ import Root from './components/root';
   // window.createTracking = createTracking;
   // window.deleteTracking = deleteTracking;
   //
-  import {fetchUserConcerts} from './util/dashboard_api_util';
-  window.fetchUserConcerts = fetchUserConcerts;
+  import {fetchDashboard} from './util/dashboard_api_util';
+  window.fetchDashboard = fetchDashboard;
 //
 
 
