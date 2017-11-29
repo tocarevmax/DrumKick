@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import DashboardIndexArtistItem from './dashboard_index_artist_item';
+import DashboardConcertItem from './dashboard_concert_item';
 
 class Dashboard extends React.Component {
 
@@ -18,6 +19,10 @@ class Dashboard extends React.Component {
       return null;
     }
 
+    const mappedConcerts = concerts.map((concert, idx) => (
+      < DashboardConcertItem key={`concert-dd-${idx}`} concert={concert} />
+    ));
+
     const mappedArtistsOnTour = artistsOnTour.map((artist, idx) => (
       < DashboardIndexArtistItem key={`artist-ont-${idx}`} artist={artist} />
     ));
@@ -29,7 +34,9 @@ class Dashboard extends React.Component {
     return(
       <div className="dashboard-main-container">
         <div className="main-pane">
-
+          <ul className="dashboard-concert-list">
+          {mappedConcerts}
+          </ul>
         </div>
 
         <div className="side-pane">
