@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import {sliceName} from '../dropdown-concerts/dropdown-concerts-item';
-
 class ArtistsDetailConcertsItem extends React.Component {
-
 
   convertTime (local_date) {
     let yyyy = local_date.slice(0,4);

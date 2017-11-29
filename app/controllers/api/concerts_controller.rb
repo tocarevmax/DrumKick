@@ -11,9 +11,9 @@ class Api::ConcertsController < ApplicationController
     names_pushed = []
 
     query.each do |concert|
-      unless names_pushed.include?(concert.name)
+      unless names_pushed.include?(concert.name[0..6])
         @concerts.push(concert)
-        names_pushed.push(concert.name)
+        names_pushed.push(concert.name[0..6])
       end
     end
 
