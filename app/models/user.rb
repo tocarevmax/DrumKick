@@ -26,6 +26,10 @@ class User < ApplicationRecord
     through: :trackings,
     source: :artist
 
+  has_many :concerts,
+    through: :artists,
+    source: :concerts
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

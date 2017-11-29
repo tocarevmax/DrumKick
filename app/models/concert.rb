@@ -37,4 +37,13 @@ class Concert < ApplicationRecord
                  :lng_column_name => :venue_long
 
   belongs_to :artist
+
+  has_many :trackings,
+    through: :artist,
+    source: :trackings
+
+  has_many :users,
+    through: :trackings,
+    source: :user
+
 end
