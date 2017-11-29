@@ -18,7 +18,8 @@ class NavBarSearchFrom extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.fetchSearchResults(this.state);
+    debugger;
+    this.props.fetchSearchResults(this.state.q);
     this.props.changeUISearch(true);
   }
 

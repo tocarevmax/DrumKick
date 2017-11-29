@@ -1,12 +1,10 @@
 
-<!-- finalize concerts ajax -->
-<!-- build artists model & controller -->
-<!-- build concerts model & controller
-test seeding to actual db
-start playing with search -->
----------------------
+D9D3
 
-Search container and search component
+demo user
+
+
+------
 
 
 <div className="navigation"> should be its own component
