@@ -6,11 +6,11 @@ import Root from './components/root';
 
 // remove when done
 
-  import {fetchAllTrackings, fetchTracking, createTracking, deleteTracking} from './actions/trackings_actions';
-  window.fetchAllTrackings = fetchAllTrackings;
-  window.fetchTracking = fetchTracking;
-  window.createTracking = createTracking;
-  window.deleteTracking = deleteTracking;
+  // import {fetchAllTrackings, fetchTracking, createTracking, deleteTracking} from './actions/trackings_actions';
+  // window.fetchAllTrackings = fetchAllTrackings;
+  // window.fetchTracking = fetchTracking;
+  // window.createTracking = createTracking;
+  // window.deleteTracking = deleteTracking;
   //
   // import {createTracking, deleteTracking, fetchTracking, fetchAllTrackings} from './util/trackings_api_util';
   // window.fetchAllTrackings = fetchAllTrackings;
