@@ -32,6 +32,11 @@ class NavBarSearchFrom extends React.Component {
     }
   }
 
+  handleBlur(e) {
+    e.currentTarget.value = "";
+    this.setState({q: ""});
+  }
+
   render() {
     return (
       <form
@@ -44,6 +49,7 @@ class NavBarSearchFrom extends React.Component {
             name="query"
             onChange={this.update.bind(this)}
             placeholder="Find concerts for any artist"
+            onBlur={this.handleBlur.bind(this)}
           />
 
           <button
