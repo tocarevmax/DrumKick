@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 class TrackButton extends React.Component {
 
@@ -15,7 +15,7 @@ class TrackButton extends React.Component {
         if (this.props.currentUser) {
           this.props.createTracking(this.props.artistId);
         } else {
-          console.log("not logged in");
+          this.props.history.push('/login');
         }
       };
     } else if (type === "untrack") {
