@@ -15,13 +15,12 @@ class Api::TrackingsController < ApplicationController
                   .find_by(artist_id: params[:id])
 
       if @tracking
-        # render json: @tracking
         render 'api/trackings/show'
       else
-        render json: ["Tracking with artist_id #{params[:id]} either doesn't exist or doesn't belong to current user."], status: 422
+        render json: ["Tracking with artist_id #{params[:id]} either doesn't exist or doesn't belong to current user."]#, status: 422
       end
     else
-      render json: ["Need to be logged in to see this tracking"], status: 422
+      render json: ["Need to be logged in to see this tracking"]#, status: 422
     end
   end
 
@@ -31,7 +30,6 @@ class Api::TrackingsController < ApplicationController
       @tracking.user_id = current_user.id
 
       if @tracking.save
-        # render json: @tracking
         render 'api/trackings/show'
       else
         render json: @tracking.errors.full_messages, status: 422
