@@ -4,7 +4,8 @@ import TrackButton from './track_button.jsx';
 import {fetchTracking, createTracking, deleteTracking} from '../../actions/trackings_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  tracking: state.entities.trackings[ownProps.artistId]
+  tracking: state.entities.trackings[ownProps.artistId],
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
