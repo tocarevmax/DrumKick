@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import {sliceName} from '../dropdown-concerts/dropdown-concerts-item';
+
 class ArtistsDetailConcertsItem extends React.Component {
 
 
@@ -25,7 +27,9 @@ class ArtistsDetailConcertsItem extends React.Component {
       <li className="artists-detail-ci-li">
         <div className="artists-detail-ci-date-place">
           <Link to={`/concerts/${concert.id}`}>
-            <h2 className="artists-detail-ci-date-link">{this.convertTime(concert.local_date)}</h2>
+            <h2 className="artists-detail-ci-date-link">
+              {`${this.convertTime(concert.local_date)}  -  ${concert.name}`}
+            </h2>
           </Link>
           <h3>{`${concert.venue_name}, ${this.extractCityState(concert.venue_address)}`}</h3>
         </div>
