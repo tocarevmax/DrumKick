@@ -17,6 +17,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     pushForm: user => dispatch(pushForm(user)),
     receiveErrors: () => dispatch(receiveErrors([])),
+    demoLogin: user => dispatch(login(user)),
     pathType
   };
 };

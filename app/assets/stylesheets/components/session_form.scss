@@ -75,12 +75,18 @@
 .swap-session {
   width: 520px;
   display: flex;
-  justify-content: center;
   margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .swap-session a {
   color: #0277ad;
+  cursor: pointer;
+}
+
+.swap-session a:first-of-type {
+  margin-bottom: 15px;
 }
 
 .swap-session a:hover {

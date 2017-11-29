@@ -35,6 +35,14 @@ class SessionForm extends React.Component {
     this.props.pushForm({user});
   }
 
+  handleDemoLogin() {
+    const user = {
+                   username: 'DemoUser',
+                   password: '123456'
+                 };
+    this.props.demoLogin({user});
+  }
+
   sessionLink() {
     if (this.props.pathType === 'login') {
       return <Link to="/signup">Don’t have an account yet? Sign up.</Link>;
@@ -54,6 +62,8 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
+
+
 
   render() {
     return (
@@ -82,7 +92,13 @@ class SessionForm extends React.Component {
             </label>
             <input className="sesssion-submit-button" type="submit" value={this.props.pathType} />
           </div>
-          <div className="swap-session">{this.sessionLink()}</div>
+          <div className="swap-session">
+            {this.sessionLink()}
+            <a onClick={this.handleDemoLogin.bind(this)}>
+              Demo User
+            </a>
+          </div>
+
         </form>
 
       </div>
