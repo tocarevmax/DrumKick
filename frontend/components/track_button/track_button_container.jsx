@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import TrackButton from './track_button.jsx';
 import {fetchTracking, createTracking, deleteTracking} from '../../actions/trackings_actions';
 
-const mapStateToProps = (state, ownProps) => {
-  // debugger;
-  return {
+const mapStateToProps = (state, ownProps) => ({
   tracking: state.entities.trackings[ownProps.artistId]
-};};
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchTracking: (artistId) => dispatch(fetchTracking(artistId)),

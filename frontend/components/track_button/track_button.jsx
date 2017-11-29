@@ -23,7 +23,7 @@ class TrackButton extends React.Component {
 
     if (this.props.tracking) {
       return(
-        <button className="artists-detail-track-button"
+        <button className={this.props.cl}
                 onClick={this.handleClick("untrack")}
         >
           untrack artist
@@ -31,7 +31,7 @@ class TrackButton extends React.Component {
       );
     } else {
       return(
-        <button className="artists-detail-track-button"
+        <button className={this.props.cl}
                 onClick={this.handleClick("track")}
         >
           track artist

@@ -52,7 +52,9 @@ class Artists extends React.Component {
               On tour: <strong>{onTour}</strong>
             </h3>
 
-            <TrackButtonContainer artistId = {artist.id}/>
+            <TrackButtonContainer artistId = {artist.id}
+              cl = {"artists-detail-track-button"}
+            />
           </div>
 
           <div className="artists-detail-image">

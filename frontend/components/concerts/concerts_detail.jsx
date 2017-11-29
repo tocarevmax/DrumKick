@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import TrackButtonContainer from '../track_button/track_button_container';
+
 class ConcertsDetail extends React.Component {
 
   componentDidMount() {
@@ -48,9 +50,10 @@ class ConcertsDetail extends React.Component {
               On tour: <strong>{onTour}</strong>
             </h3>
 
-            <button className="artists-detail-track-button">
-              track artist
-            </button>
+            <TrackButtonContainer artistId = {concert.artist.id}
+              cl = {"artists-detail-track-button"}
+            />
+
           </div>
 
           <div className="artists-detail-image">
