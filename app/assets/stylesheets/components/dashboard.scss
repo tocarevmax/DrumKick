@@ -1,0 +1,94 @@
+.dashboard-main-container {
+  display: flex;
+  flex-direction: row;
+  width: 1080px;
+  background-color: #fff;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main-pane {
+  // border: 1px solid red;
+  width: 80%;
+}
+
+.side-pane {
+  // border: 1px solid orange;
+  border-left: 1px dashed #c7c7c7;
+  flex-direction: column;
+  width: 20%;
+  padding: 20px 0;
+}
+
+.side-pane-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.dashboard-artists-on-tour, .dashboard-artists-not-on-tour {
+  flex-direction: column;
+  padding: 20px 0 20px 20px;
+}
+
+.dashboard-artists-on-tour h1, .dashboard-artists-not-on-tour h1 {
+  font-weight: bold;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.dashboard-artists-on-tour ul, .dashboard-artists-not-on-tour ul {
+  flex-wrap: wrap;
+}
+
+.dashboard-artists-on-tour ul li, .dashboard-artists-not-on-tour ul li {
+  padding-right: 5px;
+  color: #066792;
+  font-size: 14px;
+}
+
+.dashboard-artists-on-tour ul li:after, .dashboard-artists-not-on-tour ul li:after {
+  content: ",";
+}
+
+.dashboard-artists-on-tour ul li:last-child:after,
+ .dashboard-artists-not-on-tour ul li:last-child:after {
+  content: "";
+}
+
+
+.dashboard-artists-on-tour ul li:hover, .dashboard-artists-not-on-tour ul li:hover {
+  text-decoration: underline;
+}
+
+.dashboard-concert-list {
+  flex-direction: column;
+  width: 100%;
+}
+
+.db-concert-item-li {
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-bottom: 1px dashed #c7c7c7;
+}
+
+.db-concert-item-date-place h3 {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.db-concert-item-date-place {
+  flex-direction: column;
+}
+
+.db-concert-item-date-link {
+  color: #066792;
+}
+
+.db-concert-item-date-link:hover {
+  text-decoration: underline;
+}

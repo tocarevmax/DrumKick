@@ -21,10 +21,10 @@ class DashboardConcertItem extends React.Component {
   render() {
     const concert = this.props.concert;
     return (
-      <li className="artists-detail-ci-li">
-        <div className="artists-detail-ci-date-place">
+      <li className="db-concert-item-li">
+        <div className="db-concert-item-date-place">
           <Link to={`/concerts/${concert.id}`}>
-            <h2 className="artists-detail-ci-date-link">
+            <h2 className="db-concert-item-date-link">
               {`${this.convertTime(concert.local_date)}  -  ${concert.name}`}
             </h2>
           </Link>

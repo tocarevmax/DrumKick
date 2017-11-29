@@ -40,15 +40,23 @@ class Dashboard extends React.Component {
         </div>
 
         <div className="side-pane">
-          <h1>{"On tour"}</h1>
-          <ul className="dashboard-artists-on-tour">
-            {mappedArtistsOnTour}
-          </ul>
+          <h1 className="side-pane-header">{"Tracking artists"}</h1>
 
-          <h1>{"Not on tour"}</h1>
-          <ul className="dashboard-artists-not-on-tour">
-            {mappedArtistsNotOnTour}
-          </ul>
+          <div className="dashboard-artists-on-tour">
+            <h1>{"On tour"}</h1>
+            <ul>
+              {mappedArtistsOnTour}
+            </ul>
+          </div>
+
+          <div className="dashboard-artists-not-on-tour">
+            <h1>{"Not on tour"}</h1>
+            <ul >
+              {mappedArtistsNotOnTour}
+            </ul>
+          </div>
+
+
         </div>
       </div>
     );
