@@ -28,7 +28,7 @@
 
 .dashboard-artists-on-tour, .dashboard-artists-not-on-tour {
   flex-direction: column;
-  padding: 20px 0 20px 20px;
+  margin: 20px 0;
 }
 
 .dashboard-artists-on-tour h1, .dashboard-artists-not-on-tour h1 {
@@ -39,6 +39,7 @@
 
 .dashboard-artists-on-tour ul, .dashboard-artists-not-on-tour ul {
   flex-wrap: wrap;
+  padding: 0 17px;
 }
 
 .dashboard-artists-on-tour ul li, .dashboard-artists-not-on-tour ul li {
