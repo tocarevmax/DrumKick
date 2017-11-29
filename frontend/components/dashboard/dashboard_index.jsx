@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import DashboardIndexArtistItem from './dashboard_index_artist_item';
+
 class Dashboard extends React.Component {
 
   componentDidMount() {
@@ -16,10 +18,31 @@ class Dashboard extends React.Component {
       return null;
     }
 
+    const mappedArtistsOnTour = artistsOnTour.map((artist, idx) => (
+      < DashboardIndexArtistItem key={`artist-ont-${idx}`} artist={artist} />
+    ));
+
+    const mappedArtistsNotOnTour = artistsNotOnTour.map((artist, idx) => (
+      < DashboardIndexArtistItem key={`artist-not-ont-${idx}`} artist={artist} />
+    ));
+
     return(
-      <div>
-        <h1>{"This is user dashboard"}</h1>
-        <h2></h2>
+      <div className="dashboard-main-container">
+        <div className="main-pane">
+
+        </div>
+
+        <div className="side-pane">
+          <h1>{"On tour"}</h1>
+          <ul className="dashboard-artists-on-tour">
+            {mappedArtistsOnTour}
+          </ul>
+
+          <h1>{"Not on tour"}</h1>
+          <ul className="dashboard-artists-not-on-tour">
+            {mappedArtistsNotOnTour}
+          </ul>
+        </div>
       </div>
     );
   }
