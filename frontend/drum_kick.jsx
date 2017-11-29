@@ -6,13 +6,9 @@ import Root from './components/root';
 
 // remove when done
 
-  // import {fetchAllTrackings, fetchTracking, createTracking, deleteTracking} from './actions/trackings_actions';
-  // window.fetchAllTrackings = fetchAllTrackings;
-  // window.fetchTracking = fetchTracking;
-  // window.createTracking = createTracking;
-  // window.deleteTracking = deleteTracking;
-  //
-  import {fetchDashboard} from './util/dashboard_api_util';
+  import {fetchDashboard} from './actions/dashboard_actions';
+
+  // import {fetchDashboard} from './util/dashboard_api_util';
   window.fetchDashboard = fetchDashboard;
 //
 

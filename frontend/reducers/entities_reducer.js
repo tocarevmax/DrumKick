@@ -6,12 +6,14 @@ import dropdownArtists from './dropdown_artists_reducer';
 import dropdownConcerts from './dropdown_concerts_reducer';
 import concerts from './concerts_reducer';
 import trackings from './trackings_reducer';
+import dashboard from './dashboard_reducer';
 
 export default combineReducers({
   artists,
   concerts,
   search,
   trackings,
+  dashboard,
   dropdownArtists,
   dropdownConcerts,
 });
