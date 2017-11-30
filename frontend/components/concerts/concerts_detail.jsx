@@ -27,11 +27,7 @@ class ConcertsDetail extends React.Component {
     const concert = this.props.concerts[`${this.props.match.params.concertId}`];
 
     if (!concert) {
-      return (
-        <div>
-          <h1>Loading</h1>
-        </div>
-      );
+      return null;
     }
 
     const onTour = concert.artist.upcoming_events ? "yes" : "no";

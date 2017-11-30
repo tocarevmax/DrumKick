@@ -25,11 +25,7 @@ class Artists extends React.Component {
     const artist = this.props.artists[`${this.props.match.params.artistId}`];
 
     if (!artist) {
-      return (
-        <div>
-          <h1>Loading</h1>
-        </div>
-      );
+      return null;
     }
 
     const onTour = artist.upcoming_events ? "yes" : "no";
