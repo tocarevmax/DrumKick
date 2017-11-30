@@ -11,6 +11,13 @@ class Dashboard extends React.Component {
     this.props.fetchDashboard();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.trackings !== newProps.trackings) {
+      this.props.fetchDashboard();
+    }
+  }
+
+
   render() {
     const concerts = this.props.dashboard.concerts;
     const artistsOnTour = this.props.dashboard.artists_on_tour;
@@ -21,7 +28,9 @@ class Dashboard extends React.Component {
     }
 
     const mappedConcerts = concerts.map((concert, idx) => (
-      < DashboardConcertItem key={`concert-dd-${idx}`} concert={concert} />
+      < DashboardConcertItem
+          key={`concert-dd-${idx}`}
+          concert={concert} />
     ));
 
     const mappedArtistsOnTour = artistsOnTour.map((artist, idx) => (
