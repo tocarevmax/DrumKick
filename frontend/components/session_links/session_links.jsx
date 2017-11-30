@@ -14,19 +14,24 @@ const notLoggedInDisplay = (changeUISearch) => (
   </div>
 );
 
-const loggedInDisplay = (currentUser, logout, changeUISearch) => (
+const loggedInDisplay = (currentUser, logout, changeUISearch,
+                        clearTrackings, clearDashboard) => (
 	<div className="loggedInDisplay">
     <span className="username-display">{currentUser.username}</span>
     <button className="logout-button" onClick={() => {
       logout();
       changeUISearch();
+      clearTrackings();
+      clearDashboard();
     }}>Log Out</button>
 	</div>
 );
 
-const SessionLinks = ({ currentUser, logout, changeUISearch }) => {
+const SessionLinks = ({ currentUser, logout, changeUISearch,
+                        clearTrackings, clearDashboard }) => {
   if (currentUser) {
-    return loggedInDisplay(currentUser, logout, changeUISearch);
+    return loggedInDisplay(currentUser, logout, changeUISearch,
+                        clearTrackings, clearDashboard);
   } else {
     return notLoggedInDisplay(changeUISearch);
   }
