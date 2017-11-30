@@ -4,7 +4,7 @@ json.set! :concerts do
       :date_time, :local_date, :local_time, :timezone, :image_url, :venue_name, :venue_address,
       :price_range )
 
-      json.artist concert.artist, :id, :name
+      json.artist concert.artist, :id, :name, :image_url
   end
 end
 

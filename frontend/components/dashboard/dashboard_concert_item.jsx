@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import date from 'date-and-time';
+
 class DashboardConcertItem extends React.Component {
 
-  convertTime (local_date) {
-    let yyyy = local_date.slice(0,4);
-    let mm = local_date.slice(5,7);
-    let dd = local_date.slice(8);
-    return `${mm}/${dd}/${yyyy}`;
+  convertTime (date_time) {
+    const dateObj = new Date(date_time);
+    return date.format(dateObj, 'dddd, MMMM DD YYYY');
   }
 
   extractCityState (str) {
@@ -22,24 +22,45 @@ class DashboardConcertItem extends React.Component {
     const concert = this.props.concert;
     return (
       <li className="db-concert-item-li">
-        <div className="db-concert-item-date-place">
-          <Link to={`/concerts/${concert.id}`}>
-            <h2 className="db-concert-item-date-link">
-              {`${this.convertTime(concert.local_date)}  -  ${concert.name}`}
-            </h2>
-          </Link>
-          <h3>{`${concert.venue_name}, ${this.extractCityState(concert.venue_address)}`}</h3>
+        <div className="db-concert-item-date">
+          <h1>{this.convertTime(concert.date_time)}</h1>
         </div>
 
-        <div className="artists-detail-ci-price-buy">
-          <div className="ticket-info">
-            <strong>{`US ${concert.price_range}`}</strong>
+        <div className="db-concert-item-main">
+          <div className="db-concert-item-img-venue">
+            <div className="db-concert-item-img-wrapper search-img-wrapper">
+              <img className="search-image" src={concert.artist.image_url}/>
+            </div>
+            <div className="db-concert-item-date-place">
+              <Link to={`/artists/${concert.artist.id}`}>
+                <h2 className="db-concert-item-date-link">
+                  {concert.artist.name}
+                </h2>
+              </Link>
+
+              <Link to={`/concerts/${concert.id}`}>
+                <h2 className="db-concert-item-date-link">
+                  {concert.name}
+                </h2>
+              </Link>
+              <h3>{`${concert.venue_name}, ${this.extractCityState(concert.venue_address)}`}</h3>
+            </div>
           </div>
 
-          <div className="ticket-links">
-            <Link to={`/concerts/${concert.id}`}>buy tickets</Link>
+          <div className="db-concert-detail-price-link">
+            <div className="db-ticket-price">
+              <strong>{`US ${concert.price_range}`}</strong>
+            </div>
+
+            <div className="ticket-links">
+              <Link to={`/concerts/${concert.id}`}>buy tickets</Link>
+            </div>
           </div>
+
         </div>
+
+
+
       </li>
     );
   }

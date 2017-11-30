@@ -33,7 +33,7 @@
 
 .dashboard-artists-on-tour h1, .dashboard-artists-not-on-tour h1 {
   font-weight: bold;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   justify-content: center;
 }
 
@@ -68,9 +68,13 @@
 }
 
 .db-concert-item-li {
-  justify-content: space-between;
+  flex-direction: column;
   padding: 20px 30px;
   border-bottom: 1px dashed #c7c7c7;
+}
+
+.db-concert-item-main {
+  justify-content: space-between;
 }
 
 .db-concert-item-date-place h3 {
@@ -84,6 +88,9 @@
 
 .db-concert-item-date-place {
   flex-direction: column;
+  padding-left: 10px;
+  height: 100%;
+  justify-content: space-around;
 }
 
 .db-concert-item-date-link {
@@ -92,4 +99,24 @@
 
 .db-concert-item-date-link:hover {
   text-decoration: underline;
+}
+
+.db-concert-item-img-venue {
+  align-items: center;
+}
+
+.db-concert-detail-price-link {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.db-ticket-price strong {
+  font-weight: bold;
+}
+
+.db-concert-item-date {
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
 }

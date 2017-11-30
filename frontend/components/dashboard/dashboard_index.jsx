@@ -31,32 +31,42 @@ class Dashboard extends React.Component {
       < DashboardIndexArtistItem key={`artist-not-ont-${idx}`} artist={artist} />
     ));
 
+    const onTour = mappedArtistsOnTour.length > 0 ? (
+      <div className="dashboard-artists-on-tour">
+        <h1>{"On tour"}</h1>
+        <ul>
+          {mappedArtistsOnTour}
+        </ul>
+      </div>
+    ) : (
+      <div className="dashboard-artists-on-tour">
+      </div>
+    );
+
+    const notOnTour = mappedArtistsNotOnTour.length > 0 ? (
+      <div className="dashboard-artists-not-on-tour">
+        <h1>{"Not on tour"}</h1>
+        <ul >
+          {mappedArtistsNotOnTour}
+        </ul>
+      </div>
+    ) : (
+      <div className="dashboard-artists-not-on-tour">
+      </div>
+    );
+
     return(
       <div className="dashboard-main-container">
         <div className="main-pane">
           <ul className="dashboard-concert-list">
-          {mappedConcerts}
+            {mappedConcerts}
           </ul>
         </div>
 
         <div className="side-pane">
           <h1 className="side-pane-header">{"Tracking artists"}</h1>
-
-          <div className="dashboard-artists-on-tour">
-            <h1>{"On tour"}</h1>
-            <ul>
-              {mappedArtistsOnTour}
-            </ul>
-          </div>
-
-          <div className="dashboard-artists-not-on-tour">
-            <h1>{"Not on tour"}</h1>
-            <ul >
-              {mappedArtistsNotOnTour}
-            </ul>
-          </div>
-
-
+            {onTour}
+            {notOnTour}
         </div>
       </div>
     );
