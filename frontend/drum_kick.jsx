@@ -6,10 +6,14 @@ import Root from './components/root';
 
 // remove when done
 
-  import {fetchDashboard} from './actions/dashboard_actions';
+import {startFetchingArtistsFromList} from './util/seeding/seeding_artists';
+
+window.startFetchingArtistsFromList = startFetchingArtistsFromList;
+
+  // import {fetchDashboard} from './actions/dashboard_actions';
 
   // import {fetchDashboard} from './util/dashboard_api_util';
-  window.fetchDashboard = fetchDashboard;
+  // window.fetchDashboard = fetchDashboard;
 //
 
 
@@ -23,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 // remove when done
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
 //
 
   const root = document.getElementById('root');

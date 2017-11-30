@@ -1,9 +1,11 @@
 import {startFetchingConcerts} from './seeding_concerts';
 
+import fullArtistList from './979_artists';
+
 export const fetchFromTMbyArtistName = (artistName) => {
   return $.ajax({
     type:"GET",
-    url:`https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${encodeURI(artistName)}&classificationName=Music&apikey=4QLYvPV1gpArAyanl8lWyRvtESjU9XY8`,
+    url:`https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=${encodeURI(artistName)}&classificationName=Music&apikey=yvDMIiAHlR3Py77UjSOC5BcjKu0h0ZNj`,
     async:true,
     dataType: "json",
   });
@@ -45,7 +47,8 @@ const pluckRelevantFieldsFromFetchedArtist = (res) => {
       tm_id &&
       image_url &&
       tm_url &&
-      (upcoming_events >= 0)) {
+      (upcoming_events >= 0) &&
+      (name.length < 20)) {
         const result = {name, tm_id, image_url, tm_url, upcoming_events};
         // console.log(result);
         return result;
@@ -272,8 +275,8 @@ const shortList = [
 
 export const startFetchingArtistsFromList = () => {
   let resArr = [];
-  for (var i = 0; i < artistsOfChoice.length; i++) {
-    fetchFromTMbyArtistName(artistsOfChoice[i])
+  for (var i = 0; i < fullArtistList.length; i++) {
+    fetchFromTMbyArtistName(fullArtistList[i])
       .then((res) => {
         let plucked = pluckRelevantFieldsFromFetchedArtist(res);
         if (plucked) {
@@ -288,7 +291,3 @@ export const startFetchingArtistsFromList = () => {
   }
   // return resArr;
 };
-
-
-
-window.startFetchingArtistsFromList = startFetchingArtistsFromList;

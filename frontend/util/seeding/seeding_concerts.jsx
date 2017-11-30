@@ -3,7 +3,7 @@ import {findImageWidth640} from './seeding_artists';
 export const fetchConcertsFromTMbyAttractionId = (attractionId) => {
   return $.ajax({
     type:"GET",
-    url:`https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${encodeURI(attractionId)}&size=100&countryCode=US&apikey=4QLYvPV1gpArAyanl8lWyRvtESjU9XY8`,
+    url:`https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${encodeURI(attractionId)}&size=100&countryCode=US&apikey=yvDMIiAHlR3Py77UjSOC5BcjKu0h0ZNj`,
     async:true,
     dataType: "json",
     success: function(json) {
@@ -124,4 +124,4 @@ export const startFetchingConcerts = (attraction_id, db_artist_id) => {
 
 // window.startFetchingConcerts = startFetchingConcerts;
 
-window.fetchConcertsFromTMbyAttractionId = fetchConcertsFromTMbyAttractionId
+// window.fetchConcertsFromTMbyAttractionId = fetchConcertsFromTMbyAttractionId
