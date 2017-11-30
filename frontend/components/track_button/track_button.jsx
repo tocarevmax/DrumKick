@@ -4,9 +4,9 @@ import { Link, withRouter, Redirect } from 'react-router-dom';
 class TrackButton extends React.Component {
 
   componentDidMount() {
-    if (this.props.currentUser) {
-      this.props.fetchTracking(this.props.artistId);
-    }
+    // if (this.props.currentUser) {
+    //   this.props.fetchTracking(this.props.artistId);
+    // }
   }
 
   handleClick(type) {
