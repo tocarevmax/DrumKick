@@ -16,16 +16,13 @@ export const createTracking = (artist_id) => (
   $.ajax({
     method: 'POST',
     url: '/api/trackings',
-    data: {tracking: {artist_id}},
-    error: (res)=>{console.log(res);}
+    data: {tracking: {artist_id}}
   })
 );
 
 export const deleteTracking = (artistId) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/trackings/${artistId}`,
-    error: (res)=>{console.log(res);}
-  
+    url: `/api/trackings/${artistId}`
   })
 );
