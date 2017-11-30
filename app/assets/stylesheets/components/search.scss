@@ -2,14 +2,23 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  padding: 20px;
+  padding: 8px;
+  margin-right: 20px;
+
+  border-radius: 50%;
+  transition-duration: 0.5s;
+
 }
+
+.search-close:hover {
+  background-color: #f80046;
+}
+
 
 .search-container {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  // border: 1px solid red;
   align-items: center;
   font-family: 'helvetica neue',helvetica,arial,sans-serif;
 }
