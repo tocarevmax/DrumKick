@@ -116,7 +116,10 @@
 
 .username-display {
   padding: 7px 0;
+}
 
+.username-display a {
+  text-transform: capitalize;
 }
 
 

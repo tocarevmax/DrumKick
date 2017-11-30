@@ -17,7 +17,12 @@ const notLoggedInDisplay = (changeUISearch) => (
 const loggedInDisplay = (currentUser, logout, changeUISearch,
                         clearTrackings, clearDashboard) => (
 	<div className="loggedInDisplay">
-    <span className="username-display">{currentUser.username}</span>
+    <span className="username-display">
+      <Link to='/'
+        onClick={changeUISearch}>
+        {currentUser.username}
+      </Link>
+    </span>
     <button className="logout-button" onClick={() => {
       logout();
       changeUISearch();
