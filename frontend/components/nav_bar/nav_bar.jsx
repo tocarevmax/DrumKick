@@ -8,6 +8,10 @@ import DropdownConcertsContainer from '../dropdown-concerts/dropdown-concerts-co
 
 class NavBar extends React.Component {
 
+  handUiChange() {
+    this.props.changeUISearch(false);
+  }
+
   render() {
     return (
       <div className="navigation">
@@ -16,21 +20,27 @@ class NavBar extends React.Component {
             <li className="sub-nav">
               <ul>
                 <li className="logo">
-                  <Link to="/" className="to-root-link">
+                  <Link to="/" className="to-root-link"
+                    onClick={this.handUiChange.bind(this)}
+                  >
                     <img className="logo-img" src="https://assets.sk-static.com/assets/nw/furniture/songkick-logo-ac43b7a.svg" />
                   </Link>
                 </li>
 
                 <li className="nav-item metro-area menu hover-for-touch">
                   < DropdownConcertsContainer />
-                  <Link to="/">
+                  <Link to="/"
+                    onClick={this.handUiChange.bind(this)}
+                  >
                     SF Bay Area concerts
                   </Link>
                 </li>
 
                 <li className="nav-item artists menu hover-for-touch">
                   < DropdownArtistsContainer />
-                  <Link to="/">
+                  <Link to="/"
+                    onClick={this.handUiChange.bind(this)}
+                  >
                     Artists
                   </Link>
                 </li>
@@ -59,25 +69,6 @@ class NavBar extends React.Component {
   }
 }
 
-// <form className="navigation-search-form">
-//   <input
-//     className="text navigation-search"
-//     name="query"
-//     type="search"
-//     placeholder="Find concerts for any artist or city"
-//   >
-//
-// </input>
-// <button
-//   className="search-button"
-//   type="submit"
-// >
-// <img
-//   src="https://assets.sk-static.com/assets/nw/components/navigation-large-screen/search-5510d8d.svg"
-//   className="navigation-submit"
-// />
-// </button>
-// </form>
 
 
 export default withRouter(NavBar);
