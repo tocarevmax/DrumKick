@@ -56,14 +56,24 @@ class Dashboard extends React.Component {
       </div>
     );
 
+    const divStyle = {
+      fontSize: '16px',
+      width: '100%'
+    };
+
     return(
       <div className="dashboard-main-container">
         <div className="main-pane">
           <ul className="dashboard-concert-list">
             {mappedConcerts}
           </ul>
+          <div className="dashboard-artists-index-container">
+            <h1 className="search-category-divider"
+                style={divStyle}
+              >{"Artist suggestions"}</h1>
 
-          < ArtistsIndexContainer />
+            < ArtistsIndexContainer />
+          </div>
         </div>
 
         <div className="side-pane">
