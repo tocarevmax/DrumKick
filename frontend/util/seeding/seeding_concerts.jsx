@@ -121,7 +121,3 @@ export const startFetchingConcerts = (attraction_id, db_artist_id) => {
   fetchConcertsFromTMbyAttractionId(attraction_id)
     .then(pluckWithId(db_artist_id));
 };
-
-// window.startFetchingConcerts = startFetchingConcerts;
-
-// window.fetchConcertsFromTMbyAttractionId = fetchConcertsFromTMbyAttractionId

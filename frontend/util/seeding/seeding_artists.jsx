@@ -283,13 +283,9 @@ export const startFetchingArtistsFromList = () => {
           resArr.push(plucked);
           console.log(resArr);
           createArtist(plucked).then((artistR) => {
-            // debugger;
             startFetchingConcerts(plucked.tm_id, artistR.id);
           });
         }
       });
   }
-  // return resArr;
 };
-
-// modify
