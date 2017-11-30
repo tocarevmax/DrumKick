@@ -17,7 +17,7 @@ export const createTracking = (artist_id) => (
     method: 'POST',
     url: '/api/trackings',
     data: {tracking: {artist_id}},
-    error: ()=>{debugger}
+    error: (res)=>{console.log(res);}
   })
 );
 
@@ -25,7 +25,7 @@ export const deleteTracking = (artistId) => (
   $.ajax({
     method: 'DELETE',
     url: `/api/trackings/${artistId}`,
-    error: ()=>{debugger}
-
+    error: (res)=>{console.log(res);}
+  
   })
 );
