@@ -4,14 +4,11 @@
   cursor: pointer;
   padding: 8px;
   margin-right: 20px;
-
-  border-radius: 50%;
   transition-duration: 0.5s;
-
 }
 
 .search-close:hover {
-  background-color: #f80046;
+  transform: rotate(15deg) scale(1.1); 
 }
 
 

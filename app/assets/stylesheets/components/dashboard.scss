@@ -8,13 +8,11 @@
 }
 
 .main-pane {
-  // border: 1px solid red;
   width: 80%;
   flex-direction: column;
 }
 
 .side-pane {
-  // border: 1px solid orange;
   border-left: 1px dashed #c7c7c7;
   flex-direction: column;
   width: 20%;
@@ -72,6 +70,10 @@
   flex-direction: column;
   padding: 20px 30px;
   border-bottom: 1px dashed #c7c7c7;
+}
+
+.db-concert-item-li:last-of-type {
+  border-bottom: none;
 }
 
 .db-concert-item-main {

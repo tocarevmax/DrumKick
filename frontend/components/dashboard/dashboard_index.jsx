@@ -77,7 +77,7 @@ class Dashboard extends React.Component {
 
     const headerH1 = mappedConcerts.length > 0 ? (
       <h1 className="dashboard-index-header">
-        {`You have ${mappedConcerts.length} upcoming concerts for the artists you're tracking.`}
+        {`You have ${mappedConcerts.length} upcoming concerts for the artists you're tracking. Feel free to search and track more!`}
       </h1>
     ) : (
       <h1 className="dashboard-index-header">
