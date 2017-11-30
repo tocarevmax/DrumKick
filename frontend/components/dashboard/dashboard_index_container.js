@@ -4,7 +4,8 @@ import Dashboard from './dashboard_index';
 import {fetchDashboard} from '../../actions/dashboard_actions';
 
 const mapStateToProps = (state) => ({
-  dashboard: state.entities.dashboard
+  dashboard: state.entities.dashboard,
+  trackings: state.entities.trackings
 });
 
 const mapDispatchToProps = (dispatch) => ({

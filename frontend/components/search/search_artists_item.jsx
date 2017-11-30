@@ -26,7 +26,3 @@ export default ({artist, handleUIChange}) => {
     </li>
   );
 };
-
-
-
-// <button className="track-artist-search-button">Track artist</button>

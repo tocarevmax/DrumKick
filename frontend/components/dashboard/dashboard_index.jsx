@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import DashboardIndexArtistItem from './dashboard_index_artist_item';
 import DashboardConcertItem from './dashboard_concert_item';
+import ArtistsIndexContainer from '../artists/artists_index_container';
 
 class Dashboard extends React.Component {
 
@@ -61,6 +62,8 @@ class Dashboard extends React.Component {
           <ul className="dashboard-concert-list">
             {mappedConcerts}
           </ul>
+
+          < ArtistsIndexContainer />
         </div>
 
         <div className="side-pane">
