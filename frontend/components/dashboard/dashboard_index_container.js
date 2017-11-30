@@ -5,7 +5,8 @@ import {fetchDashboard} from '../../actions/dashboard_actions';
 
 const mapStateToProps = (state) => ({
   dashboard: state.entities.dashboard,
-  trackings: state.entities.trackings
+  trackings: state.entities.trackings,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

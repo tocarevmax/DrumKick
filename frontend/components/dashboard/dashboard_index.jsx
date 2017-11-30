@@ -17,6 +17,10 @@ class Dashboard extends React.Component {
     }
   }
 
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
 
   render() {
     const concerts = this.props.dashboard.concerts;
@@ -67,19 +71,37 @@ class Dashboard extends React.Component {
 
     const divStyle = {
       fontSize: '16px',
-      width: '100%'
+      width: '100%',
+      fontWeight: 'bold'
     };
+
+    const headerH1 = mappedConcerts.length > 0 ? (
+      <h1 className="dashboard-index-header">
+        {`You have ${mappedConcerts.length} upcoming concerts for the artists you're tracking.`}
+      </h1>
+    ) : (
+      <h1 className="dashboard-index-header">
+        {`You don't have any upcoming concerts. Please use search to track more artists and see their concerts.`}
+      </h1>
+    );
 
     return(
       <div className="dashboard-main-container">
         <div className="main-pane">
+          <h1 className="search-category-divider"
+              style={divStyle}
+            >{"Dashboard"}</h1>
+          <h1 className="dashboard-index-welcome-user">
+            {`Welcome, ${this.capitalizeFirstLetter(this.props.currentUser.username)}`}
+          </h1>
+          {headerH1}
           <ul className="dashboard-concert-list">
             {mappedConcerts}
           </ul>
           <div className="dashboard-artists-index-container">
             <h1 className="search-category-divider"
                 style={divStyle}
-              >{"Artist suggestions"}</h1>
+              >{"Suggested artists"}</h1>
 
             < ArtistsIndexContainer />
           </div>
