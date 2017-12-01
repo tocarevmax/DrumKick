@@ -6,6 +6,7 @@
 
 
 DrumKick is a full-stack project purposed to redesign popular SongKick but as a React/Redux single-page application.
+It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 
 ## Features
