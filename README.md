@@ -24,4 +24,6 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 ### User authentication
 
+DemoUser credentials are conveniently provided.
+
 ![signup](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/02_signup.png)
