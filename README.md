@@ -13,4 +13,10 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 * User authentication and session management.
 
-* Richly seeded database with nearly 1,000 most-searched artists and accurate information on thousands of their upcoming concerts.
+* Richly seeded database with nearly 1,000 most sought-after artists and accurate information on thousands of their upcoming concerts.
+
+* Responsive cross-table search promptly re-rendering most accurate result on each key-stroke.
+
+* Track artists and see their upcoming local concerts served soonest-first in user dashboard.
+
+* Explore artists to track and their concerts on personalized detail show page.
