@@ -50,3 +50,10 @@ Track artists and stay informed about them performing in the area.
 See artist detail
 
 ![artist detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/05_artist_detail.png)
+
+
+### Concert Detail Page
+
+See concert detail
+
+![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail.png)
