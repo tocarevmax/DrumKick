@@ -12,6 +12,7 @@ class Api::ArtistsController < ApplicationController
                        .limit(10)
     end
 
+    @artists = @artists.shuffle
 
     render :index
   end
