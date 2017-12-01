@@ -20,7 +20,7 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 * Track artists and see their upcoming local concerts served soonest-first in user dashboard.
 
-* Explore artists to track and their concerts on personalized detail show page.
+* Explore artists to track as well as their concerts on personalized detail show page.
 
 ***
 
@@ -74,7 +74,7 @@ See detailed concert information and purchase tickets by navigating to correspon
 
 ### Front-End Store Management
 
-Data fetches from the server throughout a session is conveniently structured and saved at the front-end store for efficient access and rendering.
+Data fetched from the server throughout a session is conveniently structured and saved at the front-end store for efficient access and rendering.
 
 <p align="center">
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png" />
@@ -93,4 +93,4 @@ Data fetches from the server throughout a session is conveniently structured and
 
 * Expand schema to include separates 'venues' table. Build bi-directional Venue-Concert-Artist associations.
 
-* Clearer concert detail information when it has more than one artist.
+* Clearer concert detail information when it has more than one artist in the lineup.
