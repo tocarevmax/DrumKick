@@ -53,7 +53,7 @@ class ConcertsDetail extends React.Component {
           </div>
 
           <div className="artists-detail-image">
-            <img src={concert.image_url}/>
+            <img src={concert.artist.image_url}/>
           </div>
         </div>
 

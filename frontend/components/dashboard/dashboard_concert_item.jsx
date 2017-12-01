@@ -28,9 +28,11 @@ class DashboardConcertItem extends React.Component {
 
         <div className="db-concert-item-main">
           <div className="db-concert-item-img-venue">
-            <div className="db-concert-item-img-wrapper search-img-wrapper">
-              <img className="search-image" src={concert.artist.image_url}/>
-            </div>
+            <Link to={`/artists/${concert.artist.id}`}>
+              <div className="db-concert-item-img-wrapper search-img-wrapper">
+                <img className="search-image" src={concert.artist.image_url}/>
+              </div>
+            </Link>
             <div className="db-concert-item-date-place">
               <Link to={`/artists/${concert.artist.id}`}>
                 <h2 className="db-concert-item-date-link">
