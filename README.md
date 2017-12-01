@@ -11,5 +11,5 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 ## Features
 
-* first feature
+* User authentication and session management.
 * first feature
