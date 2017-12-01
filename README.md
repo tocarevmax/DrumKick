@@ -12,4 +12,5 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 ## Features
 
 * User authentication and session management.
-* first feature
+
+* Richly seeded database with nearly 1,000 most-searched artists and accurate information on thousands of upcoming concerts for them.
