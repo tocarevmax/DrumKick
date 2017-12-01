@@ -22,6 +22,8 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 * Explore artists to track and their concerts on personalized detail show page.
 
+***
+
 
 ### Search
 
@@ -30,6 +32,8 @@ Artist/Concert search among thousands of real-life entries.
 <p align="center">
 <img width="100%" height="100%" src="https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif" />
 </p>
+
+***
 
 
 ### User authentication
