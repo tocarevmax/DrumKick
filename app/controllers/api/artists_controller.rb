@@ -22,8 +22,10 @@ class Api::ArtistsController < ApplicationController
   def show
     @artist = Artist.find_by(id: params[:id])
 
+    origin = logged_in? ? current_user.zip : [37.792,-122.393]
+
     @local_concerts = @artist.concerts
-                          .within(100, :origin => [37.792,-122.393])
+                          .within(100, :origin => origin)
                           .where('"date_time" > ?', Date.today)
                           .order('date_time ASC')
 

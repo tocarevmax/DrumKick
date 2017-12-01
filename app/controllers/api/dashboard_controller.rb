@@ -3,7 +3,7 @@ class Api::DashboardController < ApplicationController
   def index
     if logged_in?
       @concerts = current_user.concerts.includes(:artist)
-                  .within(100, :origin => [37.792,-122.393])
+                  .within(100, :origin => current_user.zip)
                   .where('"date_time" > ?', Date.today)
                   .order('date_time ASC')
 

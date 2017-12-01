@@ -2,7 +2,10 @@ class Api::ConcertsController < ApplicationController
 
   def index
 
-    query = Concert.within(100, :origin => [37.792,-122.393])
+    origin = logged_in? ? current_user.zip : [37.792,-122.393]
+
+
+    query = Concert.within(100, :origin => origin)
                    .where('"date_time" > ?', Date.today)
                    .order('date_time ASC')
                    .limit(25)

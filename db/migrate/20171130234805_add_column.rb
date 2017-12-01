@@ -1,5 +1,5 @@
 class AddColumn < ActiveRecord::Migration[5.1]
   def change
-    add_column :users, :zip, :string
+    add_column :users, :zip, :string, null: false
   end
 end
