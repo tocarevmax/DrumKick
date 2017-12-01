@@ -20,3 +20,8 @@ It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 * Track artists and see their upcoming local concerts served soonest-first in user dashboard.
 
 * Explore artists to track and their concerts on personalized detail show page.
+
+
+### User authentication
+
+![signup](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/02_signup.png)
