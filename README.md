@@ -91,6 +91,6 @@ Data fetched from the server throughout a session is conveniently structured and
 
 * Set up a rails task to weekly update the database if a band goes on tour.
 
-* Expand schema to include separates 'venues' table. Build bi-directional Venue-Concert-Artist associations.
+* Expand schema to include separate 'venues' table. Build bi-directional Venue-Concert-Artist associations.
 
 * Clearer concert detail information when it has more than one artist in the lineup.
