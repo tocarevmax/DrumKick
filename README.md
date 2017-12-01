@@ -58,3 +58,9 @@ Track an artist at their personalized page and see when they visit your town as 
 See detailed concert information and purchase tickets by navigating to corresponding ticket-vending website.
 
 ![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail1.png)
+
+
+### Front-End Store Management
+
+
+![entities reducer](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png)
