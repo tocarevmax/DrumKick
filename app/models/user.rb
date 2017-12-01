@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   validates :username, :password_digest, :session_token, :zip, presence: true
   validates :username, uniqueness: true
+  validates :zip, length: {is: 5}
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   attr_reader :password

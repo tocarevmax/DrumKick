@@ -11,7 +11,6 @@ export const signup = user => (
     method: 'POST',
     url: '/api/user',
     data: user,
-    error: (res) => {debugger;}
   })
 );
 

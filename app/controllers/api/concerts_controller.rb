@@ -8,7 +8,7 @@ class Api::ConcertsController < ApplicationController
     query = Concert.within(100, :origin => origin)
                    .where('"date_time" > ?', Date.today)
                    .order('date_time ASC')
-                   .limit(25)
+                   .limit(40)
 
     @concerts = []
     names_pushed = []
