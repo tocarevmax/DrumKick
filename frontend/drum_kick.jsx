@@ -6,10 +6,10 @@ import Root from './components/root';
 
 // remove when done
 
-import {signup} from './util/session_api_util';
-window.signup = signup;
-
-window.user = {user: {username: '123', password: '123456', zip: '10005'}};
+// import {signup} from './util/session_api_util';
+// window.signup = signup;
+// //
+// window.user = {user: {username: '12345', password: '123456', zip: '10005'}};
 // remove when done
 
 
