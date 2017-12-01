@@ -62,7 +62,7 @@ See detailed concert information and purchase tickets by navigating to correspon
 
 ### Front-End Store Management
 
-Data fetches from the server throughout a session is efficiently structured and stored at the front-end store for immediate access and rendering.
+Data fetches from the server throughout a session is conveniently structured and saved at the front-end store for efficient access and rendering.
 
 <p align="center">
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png" />
