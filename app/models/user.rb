@@ -8,11 +8,12 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  zip             :string
 #
 
 class User < ApplicationRecord
 
-  validates :username, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, :zip, presence: true
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 

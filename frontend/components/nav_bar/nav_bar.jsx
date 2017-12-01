@@ -32,7 +32,7 @@ class NavBar extends React.Component {
                   <Link to="/"
                     onClick={this.handUiChange.bind(this)}
                   >
-                    SF Bay Area concerts
+                    Local Concerts
                   </Link>
                 </li>
 

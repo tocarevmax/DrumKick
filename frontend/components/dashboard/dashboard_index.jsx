@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
   componentDidMount() {
     this.props.fetchDashboard();
     this.props.fetchAllTrackings();
+    this.props.fetchDDConcerts();
   }
 
   componentWillReceiveProps(newProps) {
