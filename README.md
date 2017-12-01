@@ -28,4 +28,7 @@ Link to Demo User authentication is conveniently provided.
 
 ![signup](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/02_signup.png)
 
+
+<p align="center">
 ![search](https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif)
+</p>
