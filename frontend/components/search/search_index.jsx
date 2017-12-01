@@ -22,7 +22,7 @@ class SearchIndex extends React.Component {
 
   render() {
     if (!this.props.search.artists) {
-      return (<h1>Nothing to render</h1>);
+      return null;
     }
     return (
       <div className="search-index">
