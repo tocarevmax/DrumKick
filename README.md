@@ -35,5 +35,11 @@ Artist/Concert search among thousands of real-life entries.
 
 <p align="center">
 <img width="100%" height="100%" src="https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif" />
-
 </p>
+
+
+### User Dashboard
+
+See upcoming concerts
+
+![dashboard](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/04_dashboard.png)
