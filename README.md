@@ -63,4 +63,9 @@ See detailed concert information and purchase tickets by navigating to correspon
 ### Front-End Store Management
 
 
+<p align="center">
+<img width="50%" height="50%" src="https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png" />
+</p>
+
+
 ![entities reducer](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png)
