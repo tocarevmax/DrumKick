@@ -29,7 +29,9 @@ Link to Demo User authentication is conveniently provided.
 ![signup](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/02_signup.png)
 
 
-Artist/Concert search among thousands of real-life entries. 
+### Search
+
+Artist/Concert search among thousands of real-life entries.
 
 <p align="center">
 <img src="https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif" />
