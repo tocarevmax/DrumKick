@@ -3,6 +3,7 @@ D9D3
 
 demo user
 
+Artist.where.not(:id => User.first.trackings.select(:artist_id).uniq)
 
 ------
 

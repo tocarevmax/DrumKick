@@ -6,7 +6,8 @@ import DropdownArtists from './dropdown-artists';
 import {fetchArtists} from '../../actions/artists_actions';
 
 const mapStateToProps = (state) => ({
-  artists: state.entities.dropdownArtists
+  artists: state.entities.dropdownArtists,
+  trackings: state.entities.trackings
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,11 +1,17 @@
 class Api::ArtistsController < ApplicationController
 
   def index
-    @artists = Artist.all
-                     .order('upcoming_events DESC')
-                     .limit(10)
 
-    @artists = @artists.shuffle
+    if logged_in?
+      @artists = Artist.where.not(:id => current_user.trackings.select(:artist_id))
+                       .order('upcoming_events DESC')
+                       .limit(10)
+    else
+      @artists = Artist.all
+                       .order('upcoming_events DESC')
+                       .limit(10)
+    end
+
 
     render :index
   end
