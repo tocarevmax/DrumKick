@@ -1,6 +1,6 @@
 # DrumKick
 
-[live site](https://drumkick.herokuapp.com)
+[LIVE SITE](https://drumkick.herokuapp.com)
 
 ![welcome page](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/01_welcome.png)
 
@@ -91,6 +91,6 @@ Data fetches from the server throughout a session is conveniently structured and
 
 * Set up a rails task to weekly update the database if a band goes on tour.
 
-* Expand schema to include separates 'venues' table. Build bi-directional Venue-Concert-Artist association.
+* Expand schema to include separates 'venues' table. Build bi-directional Venue-Concert-Artist associations.
 
 * Clearer concert detail information when it has more than one artist.
