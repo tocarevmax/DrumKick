@@ -34,6 +34,6 @@ Link to Demo User authentication is conveniently provided.
 Artist/Concert search among thousands of real-life entries.
 
 <p align="center">
-<img src="https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif" />
+<img width="100%" height="100%" src="https://github.com/tocarevmax/DrumKick/blob/master/docs/screenshots/03_search_640px_frame_high.gif" />
 
 </p>
