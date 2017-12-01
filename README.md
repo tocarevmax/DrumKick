@@ -48,13 +48,13 @@ Track artists and stay informed about them performing in the area.
 
 ### Artist Detail Page
 
-See artist detail
+Track an artist at their personalized page and see when they visit your town as well as their entire tour route.
 
 ![artist detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/05_artist_detail.png)
 
 
 ### Concert Detail Page
 
-See concert detail
+See detailed concert information and purchase tickets by navigating to corresponding ticket-vending website.
 
 ![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail1.png)
