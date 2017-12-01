@@ -2,6 +2,4 @@
 
 [live site](https://drumkick.herokuapp.com)
 
-
-Figure out and test seeding of
-both artists and concerts table
+[welcome page]: https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/01_welcome.png
