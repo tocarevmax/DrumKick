@@ -40,6 +40,13 @@ Artist/Concert search among thousands of real-life entries.
 
 ### User Dashboard
 
-See upcoming concerts
+Track artists and stay informed about them performing in the area.
 
 ![dashboard](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/04_dashboard.png)
+
+
+### Artist Detail Page
+
+See artist detail
+
+![artist detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/05_artist_detail.png)
