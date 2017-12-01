@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
                    username: '',
-                   password: ''
+                   password: '',
+                   zip: '',
                  };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -51,6 +52,20 @@ class SessionForm extends React.Component {
     }
   }
 
+  zipField() {
+    if (this.props.pathType === 'signup') {
+      return (
+        <label>ZIP Code
+          <input type="text"
+            value={this.state.zip}
+            onChange={this.handleInput('zip')}
+            className="login-input"
+          />
+        </label>
+      );
+    }
+  }
+
   showErrors() {
     return(
       <ul className="session-errors">
@@ -90,6 +105,7 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
+            {this.zipField()}
             <input className="sesssion-submit-button" type="submit" value={this.props.pathType} />
           </div>
           <div className="swap-session">
