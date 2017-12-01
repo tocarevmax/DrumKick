@@ -79,3 +79,18 @@ Data fetches from the server throughout a session is conveniently structured and
 <p align="center">
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/07_reducer.png" />
 </p>
+
+***
+
+
+### Future Directions
+
+* Add search-by-date functionality.
+
+* Set up mailer to serve personalized emails when a tracked artist is in town.
+
+* Set up a rails task to weekly update the database if a band goes on tour.
+
+* Expand schema to include separates 'venues' table. Build bi-directional Venue-Concert-Artist association.
+
+* Clearer concert detail information when it has more than one artist.
