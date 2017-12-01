@@ -5,7 +5,7 @@
 ![welcome page](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/01_welcome.png)
 
 
-DrumKick is a full-stack project purposed to redesign core functionalities of www.songkick.com but as a React/Redux single-page application.
+DrumKick is a full-stack project purposed to redesign core functionalities of Songkick but as a React/Redux single-page application.
 It uses Ruby on Rails on the backend to serve RESTful JSON API endpoints.
 
 
