@@ -56,4 +56,4 @@ See artist detail
 
 See concert detail
 
-![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail.png)
+![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail1.png)
