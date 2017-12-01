@@ -42,12 +42,16 @@ Link to Demo User authentication is conveniently provided.
 
 ![signup](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/02_signup.png)
 
+***
+
 
 ### User Dashboard
 
 Track artists and stay informed about them performing in the area.
 
 ![dashboard](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/04_dashboard.png)
+
+***
 
 
 ### Artist Detail Page
@@ -56,12 +60,16 @@ Track an artist at their personalized page and see when they visit your town as 
 
 ![artist detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/05_artist_detail.png)
 
+***
+
 
 ### Concert Detail Page
 
 See detailed concert information and purchase tickets by navigating to corresponding ticket-vending website.
 
 ![concert detail](https://raw.githubusercontent.com/tocarevmax/DrumKick/master/docs/screenshots/06_concert_detail1.png)
+
+***
 
 
 ### Front-End Store Management
